@@ -3,7 +3,7 @@
  <head>
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>后台--{{$title}}</title>
+        <title>后台--@yield('title')</title>
         
         <!-- jQuery AND jQueryUI -->
         <script type="text/javascript" src="/AD/js/libs/jquery/1.6/jquery.min.js"></script>
@@ -14,13 +14,15 @@
         <script type="text/javascript" src="/AD/min/b=CoreAdmin/js&f=cookie/jquery.cookie.js,jwysiwyg/jquery.wysiwyg.js,tooltipsy.min.js,iphone-style-checkboxes.js,excanvas.js,zoombox/zoombox.js,visualize.jQuery.js,jquery.uniform.min.js,main.js"></script>
         -->
         <link rel="stylesheet" href="/AD/css/min.css" />
+
+        <script type="text/javascript" src="/AD/content/settings/main.js"></script>
+        <link rel="stylesheet" href="/AD/content/settings/style.css" />
         <script type="text/javascript" src="/AD/js/min.js"></script>
-        
+        <style type="text/css">
+        .content li{float:left;width:auto;list-style:none;padding:5px;}
+        </style>
     </head>
     <body>
-        
-        <script type="text/javascript" src="/AD/content/settings/main.js"></script>
-<link rel="stylesheet" href="/AD/content/settings/style.css" />
 
 
   <div class="settings" id="settings">
@@ -82,20 +84,29 @@
                          --> 
         <div id="sidebar">
             <ul>
-                <li class="current"><a href="#"><img src="/AD/img/icons/menu/layout.png" alt="" /> 用户管理</a>
+                <li class=""><a href="#"><img src="/AD/img/icons/menu/layout.png" alt="" /> 用户管理</a>
                     <ul>
-                        <li class="current"><a href="{{url('/admin/user/add')}}">用户添加</a></li>
+                        <li class=""><a href="{{url('/admin/user/add')}}">用户添加</a></li>
+                        <li class=""><a href="{{url('/admin/user/index')}}">用户列表</a></li>
                         
                     </ul>
                 </li>
             </ul>
             <ul>
-                <li class="current"><a href="#"><img src="/AD/img/icons/menu/layout.png" alt="" /> 友情链接</a>
+                <li class=""><a href="#"><img src="/AD/img/icons/menu/layout.png" alt="" /> 商品分类管理</a>
                     <ul>
-                        <li class="current"><a href="{{url('/admin/user/edit')}}">添加链接</a></li>
+                        <li class=""><a href="{{url('/admin/goods_cate')}}">商品分类管理</a></li>
                     </ul>
                 </li>
             </ul>
+            <ul>
+                <li class=""><a href="#"><img src="/AD/img/icons/menu/layout.png" alt="" /> 友情链接</a>
+                    <ul>
+                        <li class=""><a href="{{url('/admin/flink/add')}}">添加链接</a></li>
+                        <li class=""><a href="{{url('/admin/flink/index')}}">链接管理</a></li>
+                    </ul>
+                </li>
+            </ul>            
         </div>
                 
                 

@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::Controller('/admin/','AdminController');
 Route::Controller('/admin/user','admin\UserController');
+Route::Controller('/admin/goods_cate','admin\Goods_cateController');
