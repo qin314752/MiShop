@@ -12,6 +12,7 @@ class AdminController extends Controller
     
     public function getIndex()
     {
-        echo 111;
+    	// echo 11;
+        return view('layout.index');
     }
 }
