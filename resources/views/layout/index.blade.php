@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
     
     <head>
@@ -303,12 +303,12 @@
                         <b class="arrow"></b>
                         <ul class="submenu">
                             <li class="">
-                                <a href="#">
+                                <a href="{{url('admin/user/add')}}">
                                     <i class="menu-icon fa fa-plus purple"></i>添加用户</a>
                                 <b class="arrow"></b>
                             </li>
                             <li class="">
-                                <a href="#">
+                                <a href="{{url('admin/user/index')}}">
                                     <i class="menu-icon fa fa-eye pink"></i>查看用户</a>
                                 <b class="arrow"></b>
                             </li>
@@ -459,10 +459,12 @@
                             <h1>@yield('ltitle')
                         </div>
                         <!-- /.page-header -->
+            <script src="/assets/js/jquery.2.1.1.min.js"></script>
                         
-                        @section('content')
-                            这是占位符('content')
-                        @show
+                    @section('content')
+                        这是占位符('content')
+                    @show
+                    </div></div></div>
                     <!-- /.page-content --></div>
             </div>
             <!-- /.main-content -->
@@ -765,6 +767,7 @@
                         });
 
                     })</script>
+                    
     </body>
 
 </html>

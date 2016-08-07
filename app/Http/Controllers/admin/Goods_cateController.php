@@ -11,10 +11,19 @@ use App\Http\Controllers\Controller;
 class Goods_cateController extends Controller
 {
 	//商品分类主页
-    public function getIndex()
+    public function getIndex(Request $request)
     {
-    	$goods_cates = DB::table('ms_goods_cate')->get(); 
-        return view('admin/goods_cate/index',['res'=>$goods_cates]);
+        $num = $request->input('num',5);
+    	$goods_cates = DB::table('ms_goods_cate')->select(DB::raw("*,CONCAT(path,',',pid) AS paths"))
+        ->where(function($query) use ($request)
+        {
+            if ($request->search != '') 
+            {
+                $query->where('name','like','%'.$request->search.'%');
+            }
+        })
+        ->orderBy("paths")->paginate($num); 
+        return view('admin/goods_cate/index',['res'=>$goods_cates,'num'=>$num,'search'=>$request->search]);
     }
     //添加商品分类
     public function getAdd(Request $request)
@@ -26,12 +35,13 @@ class Goods_cateController extends Controller
     public function getDelete($id)
     {
     	$res = DB::table('ms_goods_cate')->where('id',$id)->delete();
-    	return redirect()->back()->withInput()->withErrors('删除成功!');
+    	return back()->with('success','删除成功!');
     }
-    public function getUpdate(Request $request)
+    public function postUpdate(Request $request)
     {
-    	$res = DB::table('ms_goods_cate')->where('id',$request->id)->update($request->except('id'));
-    	echo $res;
+        $res = DB::table('ms_goods_cate')->where('id',$request->sid)->update($request->except(['sid','_token']));
+        return redirect(url("admin/goods_cate"));
+    	
     }
     public function getEdit($id)
     {
