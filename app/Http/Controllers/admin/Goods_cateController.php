@@ -22,15 +22,23 @@ class Goods_cateController extends Controller
                 $query->where('name','like','%'.$request->search.'%');
             }
         })
-        ->orderBy("paths")->paginate($num); 
+        ->orderBy("format_path")->paginate($num); 
         return view('admin/goods_cate/index',['res'=>$goods_cates,'num'=>$num,'search'=>$request->search]);
     }
     //添加商品分类
-    public function getAdd(Request $request)
+    public function getAdd()
     {
-    	$cates = $request->all();
+        $res = DB::table('ms_goods_cate')->get();
+        return view('admin/goods_cate/add',['res'=>$res]);
+    }
+    public function postInsert(Request $request)
+    {
+    	$cates = $request->except(['_token']);
+        $res = DB::table('ms_goods_cate')->where('id',$cates['pid'])->first();
+        $cates['format_path'] = $res->format_path.'--'.$cates['name'];
+        $cates['path'] = $res->path.','.$cates['pid'];
     	$res = DB::table('ms_goods_cate')->insert($cates);
-    	echo $res;
+    	return redirect(url('admin/goods_cate'));
     }
     public function getDelete($id)
     {
@@ -47,5 +55,24 @@ class Goods_cateController extends Controller
     {
     	$res = DB::table('ms_goods_cate')->where('id',$id)->first();
     	return view('admin/goods_cate/edit',['res'=>$res]);
+    }
+    //获取格式化分类信息
+    public static function Cate($arr,$id)
+    {
+        $res = [];
+        foreach ($arr as $key => $value) 
+        {
+                if ($value->pid == $id)
+               {        
+                   $value->sub = self::Cate($arr,$value->id);
+                $res[] = $value;
+               }
+        }
+        return $res;
+    }
+    private static function cates()
+    {
+        $res = DB::table('ms_goods_cate')->get();
+        return $res;
     }
 }

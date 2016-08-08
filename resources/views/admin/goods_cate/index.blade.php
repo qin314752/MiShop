@@ -52,7 +52,7 @@
 	                        Update
 	                        : activate to sort column ascending">
 	                            <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>path</th>
-	                        <th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">是否顶端分类</th>
+	                        
 	                        <th class="sorting_disabled" rowspan="1" colspan="1" aria-label=""></th>
 	                    </tr>
 	                </thead>
@@ -61,12 +61,10 @@
 	                    <tr role="row" class="even">
 	                        <td>
 	                            <a href="#">{{$v->id}}</a></td>
-	                        <td>{{str_repeat('|**',count(explode(',',$v->path))-1).$v->name}}</td>
+	                        <td>{{$v->format_path}}</td>
 	                        <td class="hidden-480">{{$v->pid}}</td>
 	                        <td>{{$v->path}}</td>
-	                        <td class="hidden-480">
-	                            <span class="label label-sm label-success">
-	                            {{str_replace([0,1],['否','是'],$v->istop)}}</span></td>
+	                        
 	                        <td>
 	                            <div class="hidden-sm hidden-xs action-buttons">
 	                                
