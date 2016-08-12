@@ -9,10 +9,13 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-    
-    public function getIndex()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-    	// echo 11;
-        return view('layout.index');
+        return view('admin/index');
     }
 }

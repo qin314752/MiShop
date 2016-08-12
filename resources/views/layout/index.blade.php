@@ -289,7 +289,7 @@
                 <!-- /.sidebar-shortcuts -->
                 <ul class="nav nav-list">
                     <li class="active">
-                        <a href="index.html">
+                        <a href="{{url('admin/')}}">
                             <i class="menu-icon fa fa-tachometer"></i>
                             <span class="menu-text">后台首页</span></a>
                         <b class="arrow"></b>
@@ -350,6 +350,26 @@
                             <li class="">
                                 <a href="{{url('admin/goods/add')}}">
                                     <i class="menu-icon fa fa-eye pink"></i>添加商品</a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa-coffee  fa"></i>
+                            <span class="menu-text">导航列表</span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="{{url('admin/nav/add')}}">
+                                    <i class="menu-icon fa fa-plus pink"></i>添加导航</a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="{{url('admin/nav')}}">
+                                    <i class="menu-icon fa fa-eye purple"></i>导航列表</a>
                                 <b class="arrow"></b>
                             </li>
                         </ul>
@@ -462,7 +482,7 @@
             <script src="/assets/js/jquery.2.1.1.min.js"></script>
                         
                     @section('content')
-                        这是占位符('content')
+                        <h1>这里是MiShop后台首页</h1>
                     @show
                     </div></div></div>
                     <!-- /.page-content --></div>
@@ -499,12 +519,12 @@
                 <script src="/assets/js/jquery.1.11.1.min.js"></script>
             <![endif]-->
             <!--[if !IE]> -->
-                <script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery.min.js'>" + "<" + "/script>");</script>
+                <script type="text/javascript">window.jQuery || document.write("<script src='/assets/js/jquery.min.js'>" + "<" + "/script>");</script>
                 <!-- <![endif]-->
                 <!--[if IE]>
                     <script type="text/javascript">window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>" + "<" + "/script>");</script>
                 <![endif]-->
-                <script type="text/javascript">if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");</script>
+                <script type="text/javascript">if ('ontouchstart' in document.documentElement) document.write("<script src='/assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");</script>
                 <script src="/assets/js/bootstrap.min.js"></script>
                 <!-- page specific plugin scripts -->
                 <!--[if lte IE 8]>

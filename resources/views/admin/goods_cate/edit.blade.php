@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('title', '修改用户')
+@section('title', '修改分类')
 
 @section('content')
 <form method="post" action="{{url('admin/goods_cate/update')}}" id="validation-form" class="form-horizontal" novalidate="novalidate">
@@ -20,15 +20,6 @@
           <div class="col-xs-12 col-sm-9">
             <div class="clearfix">
               <input type="text" class="col-xs-12 col-sm-5 "name="name" id="name" value="{{$res->name}}">
-            </div>
-          </div>
-        </div>
-        <div class="space-2"></div>
-        <div class="form-group">
-          <label for="istop" class="control-label col-xs-12 col-sm-3 no-padding-right">是否顶端分类</label>
-          <div class="col-xs-12 col-sm-9">
-            <div class="clearfix">
-              <input type="text" class="col-xs-12 col-sm-5" name="istop" value="{{$res->istop}}">
             </div>
           </div>
         </div>
