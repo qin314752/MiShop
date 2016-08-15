@@ -11,11 +11,16 @@
 |
 */
 Route::get('/', 'HomeController@index');
+Route::get('/search/', 'home\SearchController@search');
+Route::Controller('/detail','home\DetailController');
 Route::Controller('/home/login','home\LoginController');
+Route::Controller('/list','home\ListController');
+// Route::Controller('/ucenter','home\UcenterController');
+Route::Controller('/order','home\OrderController');
+
+
 Route::get('/admin','AdminController@index');
-
-// Route::Controller('/admin/login','admin\LoginController');
-
+// Route::Controller('/admin/order','admin\OrderController');
 Route::Controller('/admin/user','admin\UserController');
 Route::Controller('/admin/goods','admin\GoodsController');
 Route::Controller('/admin/nav','admin\NavController');

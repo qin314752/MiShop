@@ -10,9 +10,13 @@
 <meta name="viewport" content="width=1226" />
 <link rel="shortcut icon" href="//www.lampmaster.com/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="//www.lampmaster.com/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="Css/base.min.css" >
-<link rel="stylesheet" href="Css/index.min.css">
-<script src="Scripts/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="/Css/base.min.css" >
+<link rel="stylesheet" href="/Css/index.min.css">
+<link rel="stylesheet" href="/Css/list.min.css">
+<link rel="stylesheet" href="/Css/main.min.css">
+<link rel="stylesheet" href="/Css/goods-detail.min.css">
+
+<script src="/Scripts/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">var _head_over_time = (new Date()).getTime();</script>
 </head>
 <body>
@@ -27,8 +31,24 @@
                 <div class="loading"><div class="loader"></div></div>
             </div>
         </div>
+        @if(session('user'))
+        <div id="J_userInfo" class="topbar-info">
+            <span class="user">
+                <a target="_blank" href="url('/ucenter')" class="user-name" rel="nofollow" >
+                    <span class="name">{{session('user')->email}}</span>
+                    <i class="iconfont"></i></a>
+               
+            </span>
+            <span class="sep">|</span>
+            <a target="_blank" href="" class="link link-order" rel="nofollow" >我的订单</a>
+        </div>
+        @else
         <div class="topbar-info" id="J_userInfo">
-            <a  rel="nofollow" class="link" href="//www.lampmaster.com/site/login" data-needlogin="true">登录</a><span class="sep">|</span><a  rel="nofollow" class="link" href="https://www.lampmaster.com/pass/register" >注册</a>        </div>
+            <a  rel="nofollow" class="link" href="{{url('/home/login')}}" data-needlogin="true">登录</a>
+            <span class="sep">|</span>
+            <a  rel="nofollow" class="link" href="{{url('/home/login/zhuce')}}" >注册</a>        
+        </div>
+        @endif
     </div>
 </div>
 <div class="site-header">
@@ -42,11 +62,12 @@
                 <li id="J_navCategory" class="nav-category">
                     <a class="link-category" href="#" data-stat-id="#">
                         <span class="text">全部商品分类</span></a>
+                    @section('cates')   
                     <div class="site-category">
                         <ul id="J_categoryList" class="site-category-list clearfix">
                             @foreach($cates as $k=>$v)
                             <li class="ecatgory-item">
-                                <a class="title" href="#" data-stat-id="0d41105a57b667b5" onclick="">{{$v->name}}
+                                <a class="title" href="{{url('/list/index',['c'=>$v->id])}}" data-stat-id="0d41105a57b667b5" onclick="">{{$v->name}}
                                     <i class="iconfont"></i></a>
                                 <div class="children clearfix children-col-2">
                                     <ul class="children-list children-list-col children-list-col-1">
@@ -81,6 +102,7 @@
                             
                         </script>
                     </div>
+                    @show
                 </li>
                 @foreach($navs as $k=>$v)
                 <li class="nav-item">
@@ -125,9 +147,9 @@
             </ul>
         </div>
         <div class="header-search">
-            <form id="J_searchForm" class="search-form clearfix" action="//www.lampmaster.com/search" method="get">
+            <form id="J_searchForm" class="search-form clearfix" action="{{url('/search')}}" method="get">
                 <label for="search" class="hide">站内搜索</label>
-                <input class="search-text" type="search" id="search" name="keyword" autocomplete="off" data-search-config="{'defaultWords':[{'Key':'小米手机5','Rst':11},{'Key':'空气净化器2','Rst':1},{'Key':'活塞耳机','Rst':4},{'Key':'小米路由器','Rst':8},{'Key':'移动电源','Rst':21},{'Key':'运动相机','Rst':3},{'Key':'小蚁摄像机','Rst':2},{'Key':'小米体重秤','Rst':1},{'Key':'小米插线板','Rst':13},{'Key':'配件优惠套装','Rst':32}]}" />
+                <input class="search-text" type="search" id="search" name="keyw" autocomplete="off" data-search-config="{'defaultWords':[{'Key':'小米手机5','Rst':11},{'Key':'空气净化器2','Rst':1},{'Key':'活塞耳机','Rst':4},{'Key':'小米路由器','Rst':8},{'Key':'移动电源','Rst':21},{'Key':'运动相机','Rst':3},{'Key':'小蚁摄像机','Rst':2},{'Key':'小米体重秤','Rst':1},{'Key':'小米插线板','Rst':13},{'Key':'配件优惠套装','Rst':32}]}" />
                 <input type="submit" class="search-btn iconfont" value="&#xe616;" />
                 <div class="search-hot-words">
                     <a href="//www.lampmaster.com/redmipro/">红米Pro</a><a href="//www.lampmaster.com/mibookair/">小米笔记本Air</a>                </div>

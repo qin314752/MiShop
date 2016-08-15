@@ -70,6 +70,7 @@ class LoginController extends Controller
 			}
 
 			if($res){
+				session(['user'=>$res]);
 				return redirect('/');
 			}else{
 			return back()->withErrors('用户名或密码错误');

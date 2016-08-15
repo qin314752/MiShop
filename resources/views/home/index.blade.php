@@ -29,37 +29,29 @@
         <script type="text/javascript">
                 var i = 0;
                 var slen = $('.loaded').attr('scount');
-                // $('.ui-prev').click(function()
-                // {
-                //     if (i==0) 
-                //         i =slen
-                //         else --i;
-                //         act();
-                // }) 
-                // $('ui-next').click(function()
-                // {
-                //     if(i==slen)
-                //         i = 0
-                //     else
-                //         ++i;
-                //     act();
-                // })
-                var inte = setInterval(function()
+                $('.ui-prev').click(function()
                 {
-                    $('.slide').eq(i).fadeIn(1000).siblings().fadeOut(1000);
-                    $('.ui-pager-link').each(function()
-                    {
-                        if (parseInt($(this).attr('pic-id')) == i)
-                        {
-                            $(this).addClass('active');
-                        }else
-                        {
-                            $(this).removeClass('active');
-                        }
-                    })
-                    i++;
-                    if (i == slen) {i = 0}
-                },3000)
+                    if(--i == -1)
+                        {i == slen-1}
+                    act(i);
+                });
+                $('.ui-next').click(function()
+                {
+                    if(++i == slen)
+                        {i = 0}
+                    act(i);
+                })
+                
+                var inte = setInterval(act(i),1000)
+                
+                function act(n)
+                {
+                    $('.slide').fadeOut(1000);
+                    $('.slide').eq(n).fadeIn(1000);
+                    $('.ui-pager-link').removeClass('active');
+                    $('.ui-pager-link').eq(n).addClass('active');
+                    n++;
+                }
                 
 
             </script>  
