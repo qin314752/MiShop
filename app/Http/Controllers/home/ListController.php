@@ -12,24 +12,15 @@ class ListController extends Controller
     
     public function getIndex($c)
     {
-        // dd($p,$c);   
-        //5个分类导航
-        $cates = DB::table('ms_goods_cate')->skip(0)->take(5)->get();
-        $goods = $this->getGoodspubu($c);
-        // dd($goods);
-        return view('home/list/catelist',['cates'=>$cates,'goods'=>$goods]);
-    }
-    public function getGoodspubu($c)
-    {
+        $cate = DB::table('ms_goods_cate')->where('id',$c)->first();
         if ($c == 0) 
         {
-            $goods = DB::table('ms_goods')->get();
+            $goods = DB::table('ms_goods')->paginate(16);
         }
         else
         {
-            $goods = DB::table('ms_goods')->where('cid',$c)->get();
+            $goods = DB::table('ms_goods')->where('cid',$c)->paginate(16);
         }
-        return $goods;
+        return view('home/list/catelist',['catename'=>$cate->name,'goods'=>$goods]);
     }
-   
 }

@@ -12,9 +12,13 @@
 */
 Route::get('/', 'HomeController@index');
 Route::get('/search/', 'home\SearchController@search');
+Route::controller('/checkout', 'home\CheckoutController');
 Route::Controller('/detail','home\DetailController');
 Route::Controller('/home/login','home\LoginController');
 Route::Controller('/list','home\ListController');
+
+//购物车
+Route::Controller('/cart','home\CartController');
 // Route::Controller('/ucenter','home\UcenterController');
 Route::Controller('/order','home\OrderController');
 

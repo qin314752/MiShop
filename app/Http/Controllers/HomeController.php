@@ -23,6 +23,13 @@ class HomeController extends Controller
         $navs = DB::table('ms_nav_list')->get();
         return view('layout/head',['navs'=>$navs,'cates'=>$cates]);
     }
+    public static function minihead()
+    {
+        $cate = DB::table('ms_goods_cate')->get();
+        $cates = Goods_cateController::Cate($cate,0);
+        $navs = DB::table('ms_nav_list')->get();
+        return view('layout/minihead',['navs'=>$navs,'cates'=>$cates]);
+    }
     public static function footer()
     {
         $flink = DB::table('ms_flink')->get();

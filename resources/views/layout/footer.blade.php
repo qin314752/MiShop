@@ -97,9 +97,9 @@
         </div>
         <div class="info-links">
                     <a  rel="nofollow" href="//www.lampmaster.com/privacy-seal/validation?rid=4fc28a8c-6822-4980-9c4b-9fdc69b94eb8&lang=zh-cn" target="_blank"> </a>
-                    <a  rel="nofollow" href="//www.lampmaster.com/cert/l/CX20120926001783002010" target="_blank"><img  rel="nofollow" src="Picture/v-logo-2.png" alt="诚信网站" /></a>
-                    <a  rel="nofollow" href="https://www.lampmaster.com/verifyseal.dll?sn=e12033011010015771301369&ct=df&pa=461082" target="_blank"><img  rel="nofollow" src="Picture/v-logo-1.png" alt="可信网站" /></a>
-                    <a  rel="nofollow" href="http://www.315online.com.cn/member/315140007.html" target="_blank"><img  rel="nofollow" src="Picture/v-logo-3.png" alt="网上交易保障中心" /></a>
+                    <a  rel="nofollow" href="//www.lampmaster.com/cert/l/CX20120926001783002010" target="_blank"><img  rel="nofollow" src="/Picture/v-logo-2.png" alt="诚信网站" /></a>
+                    <a  rel="nofollow" href="https://www.lampmaster.com/verifyseal.dll?sn=e12033011010015771301369&ct=df&pa=461082" target="_blank"><img  rel="nofollow" src="/Picture/v-logo-1.png" alt="可信网站" /></a>
+                    <a  rel="nofollow" href="http://www.315online.com.cn/member/315140007.html" target="_blank"><img  rel="nofollow" src="/Picture/v-logo-3.png" alt="网上交易保障中心" /></a>
                 </div>
     </div>
     <div class="slogan ir">探索黑科技，小米为发烧而生</div>
@@ -111,7 +111,7 @@
         </div>
         <div class="modal-bd">
             <p style="margin: 0 0 10px;">打开微信，点击右上角的“+”，选择“扫一扫”功能，<br/>对准下方二维码即可。</p>
-            <img alt="" src="Picture/qr.png" width="375" height="375" />
+            <img alt="" src="/Picture/qr.png" width="375" height="375" />
         </div>
     </div>
 <!-- .modal-weixin END -->
@@ -158,7 +158,7 @@
              <p class="desc">在防黄牛的路上，我们一直在努力，也知道做的还不够。<br>
     所以，这次劳烦您多输一次验证码，我们一起防黄牛。</p>
             <div class="mode-loading" id="J_bigtapModeLoading">
-                <img src="Picture/loading.gif" alt="" width="32" height="32">
+                <img src="/Picture/loading.gif" alt="" width="32" height="32">
                 <a  id="J_bigtapModeReload" class="reload  hide" href="javascript:void(0);">网络错误，点击重新获取验证码！</a>
             </div>
             <div class="mode-action hide" id="J_bigtapModeAction">
@@ -209,10 +209,10 @@
         </div>
     </div>
 <!-- .modal-globalSites END -->
-<script src="Scripts/base.min.js"></script>
+<!-- <script src="Scripts/base.min.js"></script>
 
 <script src="Scripts/home.min.js"></script>
-<script src="Scripts/xmsg_ti.js"></script>
+<script src="Scripts/xmsg_ti.js"></script> -->
 
 </body>
 </html>

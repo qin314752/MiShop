@@ -2,7 +2,8 @@
 <html lang="zh-CN" xml:lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <title>小米商城-小米官方网站，小米手机、红米手机、小米电视正品专卖</title>
 <meta name="description" content="小米商城-直营小米公司旗下所有产品，囊括小米手机、红米手机、小米电视、智能硬件、配件及小米生活周边，同时提供小米客户服务及售后支持。" />
@@ -10,14 +11,18 @@
 <meta name="viewport" content="width=1226" />
 <link rel="shortcut icon" href="//www.lampmaster.com/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="//www.lampmaster.com/favicon.ico" type="image/x-icon" />
+<!-- <link href="/Css/bootstrap.min.css" rel="stylesheet"> -->
 <link rel="stylesheet" href="/Css/base.min.css" >
 <link rel="stylesheet" href="/Css/index.min.css">
 <link rel="stylesheet" href="/Css/list.min.css">
 <link rel="stylesheet" href="/Css/main.min.css">
 <link rel="stylesheet" href="/Css/goods-detail.min.css">
+<link rel="stylesheet" href="/Css/checkout.min.css">
+<link rel="stylesheet" href="/Css/goods-comment-detail.min.css">
+<!-- <link rel="stylesheet" href="/Css/cart.css"> -->
 
-<script src="/Scripts/jquery-1.8.3.min.js"></script>
-<script type="text/javascript">var _head_over_time = (new Date()).getTime();</script>
+<script src="/Scripts/jquery.min.js"></script>
+<script src="/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="site-topbar">
@@ -112,19 +117,19 @@
                             <ul class="children-list clearfix">
                                                             <li class="first">
                                     <div class="figure figure-thumb">
-                                        <a href="//www.lampmaster.com/mimax/"><img src="Picture/placeholder-220!110x110.png"  alt="小米Max" width="160" height="110" /></a>
+                                        <a href="//www.lampmaster.com/mimax/"><img src="/Picture/placeholder-220!110x110.png"  alt="小米Max" width="160" height="110" /></a>
                                     </div>
                                     <div class="title"><a href="//www.lampmaster.com/mimax/">小米Max</a></div>
                                     <p class="price">1499元起</p>                                                                    </li>
                                                             <li>
                                     <div class="figure figure-thumb">
-                                        <a href="//www.lampmaster.com/mi5/"><img src="Picture/placeholder-220!110x110.png"  alt="小米手机5" width="160" height="110" /></a>
+                                        <a href="//www.lampmaster.com/mi5/"><img src="/Picture/placeholder-220!110x110.png"  alt="小米手机5" width="160" height="110" /></a>
                                     </div>
                                     <div class="title"><a href="//www.lampmaster.com/mi5/">小米手机5</a></div>
                                     <p class="price">1999元起</p>                                                                    </li>
                                                             <li>
                                     <div class="figure figure-thumb">
-                                        <a href="//www.lampmaster.com/mi4c/"><img src="Picture/placeholder-220!110x110.png"  alt="小米手机4c" width="160" height="110" /></a>
+                                        <a href="//www.lampmaster.com/mi4c/"><img src="/Picture/placeholder-220!110x110.png"  alt="小米手机4c" width="160" height="110" /></a>
                                     </div>
                                     <div class="title"><a href="//www.lampmaster.com/mi4c/">小米手机4c</a></div>
                                     <p class="price">1099元</p>                                                                    </li>

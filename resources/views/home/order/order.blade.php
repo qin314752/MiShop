@@ -72,12 +72,10 @@
                 </div>
                 <div id="J_orderListPages">
                     <div class="xm-pagenavi">
-                        <a class="numbers" href="#1">
-                            <span class="iconfont"></span></a>
-                        <span class="numbers current">1</span>
-                        <a href="#2" class="numbers" >2</a>
-                        <a href="#2" class="numbers">
-                            <span class="iconfont"></span></a>
+                        {!! $fenye->render() !!}
+                        <script type="text/javascript">
+                            $('.pagination li').css({'width':'20px'}).addClass('numbers');
+                        </script>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,4 @@
+{!! $fenye->render() !!}
+<script type="text/javascript">
+    $('.pagination li').css({'width':'20px'}).addClass('numbers');
+</script>

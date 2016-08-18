@@ -9,12 +9,10 @@ use App\Http\Controllers\Controller;
 
 class OrderController extends Controller
 {
-    public function getIndex($p = 1)
+    public function getIndex()
     {
-        $num = 5;
-        $s = $num*$p;
         $uid = session('user')->id;
-        $res = DB::table('ms_order')->where('uid',$uid)->skip($s)->take($num)->get();
+        $res = DB::table('ms_order')->where('uid',$uid)->paginate(5);
         $arr = [];
         foreach ($res as $key => $value) {
             $goods = DB::table('ms_order_goods')->where('order_id',$value->order_code)
@@ -22,6 +20,7 @@ class OrderController extends Controller
             $arr[$key] = $value;
             $arr[$key]->goods = $goods;
         }
-        return view('home/order/order',['orders'=>$arr]);
+        return view('home/order/order',['orders'=>$arr,'fenye'=>$res]);
     }
+
 }

@@ -1,5 +1,6 @@
 {!!\App\Http\Controllers\HomeController::head()!!}
 <script type="text/javascript">$('.site-category').hide()</script>
+<script type="text/javascript" src="/Scripts/jquery.fly.min.js"></script>
 <div class="goods-detail">
     <div class="goods-detail-info  clearfix J_goodsDetail">
         <div class="container">
@@ -14,12 +15,13 @@
                         <div class="goods-small-pic clearfix">
                             <ul id="goodsPicList">
                                 <li class="current">
-                                    <img src="{{$good->pic}}"></li>
+                                    <img src="{{$good->pic}}" ></li>
                             </ul>
                         </div>
                     </div>
                     <div class="span11 goods-batch-img-list-block J_goodsBatchImg"></div>
                 </div>
+                
                 <div class="span7 goods-info-rightbox">
                     <div class="goods-info-leftborder"></div>
                     <dl class="goods-info-box ">
@@ -46,9 +48,23 @@
                                         
                                     </div>
                                 </dd>
-                                <dd class="goods-info-head-cart" id="goodsDetailBtnBox">
-                                    <a href="{{url('/cart',['id'=>$good->id])}}" id="goodsDetailAddCartBtn" class="btn  btn-primary goods-add-cart-btn" >
-                                        <i class="iconfont"></i>加入购物车</a>
+                                <dd class="goods-info-head-cart" id="goodsDetailBtnBox"> 
+                                <!-- href="{{url('/cart/insert',['id'=>$good->id])}} -->
+                                    <button " id="goodsDetailAddCartBtn" id-src="{{$good->id}}" class="btn  btn-primary goods-add-cart-btn addcar" >
+                                        <i class="iconfont"></i>加入购物车</button>
+                <script type="text/javascript">
+                    $('#goodsDetailAddCartBtn').click(function()
+                    {
+                        var id = $(this).attr('id-src');
+                        $.get("{{url('cart/insert')}}",{id:id},function(data)
+                        {
+                            if (data == 1) 
+                            {
+                                alert('添加成功');
+                            }
+                        })
+                    })
+                </script>
                                     <a id="goodsDetailCollectBtn" data-isfavorite="false" class=" btn btn-gray  goods-collect-btn ">
                                         <i class="iconfont default"></i>
                                         <i class="iconfont red"></i>
