@@ -29,53 +29,85 @@
                         <div class="box-bd">
                             <ul class="uc-nav-list">
                                 <li class="active">
-                                    <a href="http://order.mi.com/portal?r=39157.1471244075" data-stat-id="00e076c95d370478" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-00e076c95d370478', 'http://order.mi.com/portal', 'pcpid']);">我的个人中心</a></li>
+                                    <a href="#">我的个人中心</a></li>
+                                 <li>
+                                    <a href="{{url('/ucenter/sele/')}}">个人信息</a></li>
                                 <li>
-                                    <a href="http://order.mi.com/cashAccount?r=39157.1471244075" data-stat-id="a52bf798dafa9754" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-a52bf798dafa9754', 'http://order.mi.com/cashAccount', 'pcpid']);">现金账户</a></li>
+                                    <a href="#">修改密码</a></li>
                                 <li>
-                                    <a href="http://order.mi.com/ecard/bind?r=39157.1471244075" data-stat-id="bad8210fdb9088c4" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-bad8210fdb9088c4', 'http://order.mi.com/ecard/bind', 'pcpid']);">小米礼品卡</a></li>
-                                <li>
-                                    <a href="http://order.mi.com/huanxin/list?r=39157.1471244075" data-stat-id="593e8c9f8e61bcdc" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-593e8c9f8e61bcdc', 'http://order.mi.com/huanxin/list', 'pcpid']);">手机换新券</a></li>
-                                <li>
-                                    <a href="http://order.mi.com/user/favorite?r=39157.1471244075" data-stat-id="0c25ea23fee92211" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-0c25ea23fee92211', 'http://order.mi.com/user/favorite', 'pcpid']);">喜欢的商品</a></li>
-                                <li>
-                                    <a href="http://order.mi.com/user/coupon?r=39157.1471244075" data-stat-id="cdcec10f2cbe6b42" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-cdcec10f2cbe6b42', 'http://order.mi.com/user/coupon', 'pcpid']);">优惠券</a></li>
-                                <li>
-                                    <a href="http://order.mi.com/user/address?r=39157.1471244075" data-stat-id="48ecd23c6e6e50ba" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-48ecd23c6e6e50ba', 'http://order.mi.com/user/address', 'pcpid']);">收货地址</a></li>
+                                    <a href="{{url('/addr')}}">收货地址</a></li>
                             </ul>
                         </div>
                     </div>
+                  
                     <div class="uc-nav-box">
                         <div class="box-hd">
-                            <h3 class="title">售后服务</h3></div>
+                            <h3 class="title"><!-- 账户管理 --></h3></div>
                         <div class="box-bd">
                             <ul class="uc-nav-list">
-                                <li>
-                                    <a href="http://service.order.mi.com/record/list?_r=39157.1471244075" data-stat-id="cee379f43f5f5fc2" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-cee379f43f5f5fc2', 'http://service.order.mi.com/record/list', 'pcpid']);">服务记录</a></li>
-                                <li>
-                                    <a href="http://service.order.mi.com/apply/fill?_r=39157.1471244075" data-stat-id="49e8df0584b02364" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-49e8df0584b02364', 'http://service.order.mi.com/apply/fill', 'pcpid']);">申请服务</a></li>
-                                <li>
-                                    <a href="http://service.order.mi.com/user/compensate?_r=39157.1471244075" data-stat-id="5aedd7982a0a1069" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-5aedd7982a0a1069', 'http://service.order.mi.com/user/compensate', 'pcpid']);">领取快递报销</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="uc-nav-box">
-                        <div class="box-hd">
-                            <h3 class="title">账户管理</h3></div>
-                        <div class="box-bd">
-                            <ul class="uc-nav-list">
-                                <li>
-                                    <a href="https://account.xiaomi.com/" target="_blank" data-stat-id="35eef2fd7467d6ca" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-35eef2fd7467d6ca', 'https://account.xiaomi.com/', 'pcpid']);">个人信息</a></li>
-                                <li>
-                                    <a href="https://account.xiaomi.com/pass/auth/security/home#service=setPassword" target="_blank" data-stat-id="ae5ee0188510f1e6" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-ae5ee0188510f1e6', 'https://account.xiaomi.com/pass/auth/security/home#service=setPassword', 'pcpid']);">修改密码</a></li>
-                                <li>
-                                    <a href="http://uvip.xiaomi.cn" target="_blank" data-stat-id="c130c3dbf41fd4d8" onclick="_msq.push(['trackEvent', '45a270e10b1f8e93-c130c3dbf41fd4d8', 'http://uvip.xiaomi.cn', 'pcpid']);">社区VIP认证</a></li>
+                               <li><a href=""></a></li>
+                               <li><a href=""></a></li>
+                               <li><a href=""></a></li>
+                               <li><a href=""></a></li>
+                               
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             @section('content')
+             <div class="span16">
+                <div class="protal-content-update hide">
+                    <div class="protal-username">
+                        Hi, {{$user->username}}       
+                     </div>                    
+                </div>
+                <div class="uc-box uc-main-box">
+                    <div class="uc-content-box portal-content-box">
+                        <div class="box-bd">
+                            <div class="portal-main clearfix">
+                                <div class="user-card">
+                                <br>
+                                    <h2 class="username">{{$user->username}}</h2>
+                                 <br>
+                                    <a target="_blank" href="{{url('/ucenter/sele/')}}">修改个人信息 &gt;</a>
+                                    <img width="150" height="150" alt="1135754503" src="{{$user->pic}}" class="avatar">
+                                </div>
+                                <div class="user-actions">
+                                    <ul class="action-list">
+                                        <li>账户安全：<span class="level level-3">较高</span></li>                                                             
+                                         <li>绑定邮箱：<span class="tel">{{$user->email}}</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portal-sub">
+                                <ul class="info-list clearfix">
+                                    <li>
+                                        <h3>支付的订单：<span class="num"></span></h3>
+                                        <a href="#">查看支付订单<i class="iconfont"></i></a>
+                                        <img alt="" src="/ucente/image/portal-icon-1.png">
+                                    </li>
+                                    <li>
+                                        <h3>收货地址<span class="num"></span></h3>
+                                        <a href="   ">查看收货地址:<i class="iconfont"></i></a>
+                                        <img alt="" src="/ucente/image/portal-icon-2.png">
+                                    </li>
+                                    <!-- <li>
+                                        <h3>待评价商品数：<span class="num">0</span></h3>
+                                        <a href="#">查看待评价商品<i class="iconfont"></i></a>
+                                        <img alt="" src="/ucente/image/portal-icon-3.png">
+                                    </li>
+                                    <li>
+                                        <h3>喜欢的商品：<span class="num">0</span></h3>
+                                        <a href="#">查看喜欢的商品<i class="iconfont"></i></a>
+                                        <img alt="" src="/ucente/image/portal-icon-4.png">
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @show
         </div>
     </div>

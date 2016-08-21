@@ -23,6 +23,15 @@ class HomeController extends Controller
         $navs = DB::table('ms_nav_list')->get();
         return view('layout/head',['navs'=>$navs,'cates'=>$cates]);
     }
+    //个人中心头部
+     public static function ucenterhead()
+    {
+        $cate = DB::table('ms_goods_cate')->get();
+        $cates = Goods_cateController::Cate($cate,0);
+        $navs = DB::table('ms_nav_list')->get();
+        return view('layout/ucenterhead',['navs'=>$navs,'cates'=>$cates]);
+    }
+    //付款头部
     public static function minihead()
     {
         $cate = DB::table('ms_goods_cate')->get();

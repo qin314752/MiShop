@@ -7,78 +7,76 @@
     <div class="container">
         <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
         </button> -->
-        <form action="" method="post">
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span></button>
-
-                    <h4 class="modal-title" id="myModalLabel">添加收货地址</h4></div>
-                  <div class="modal-body">
-                    <div class="">*收货人:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input type="text" style="width:360px;height:30px" name="name"></div>
-                    <br>
-                    <div class="">*手机号码:&nbsp;
-                      <input type="text" style="width:360px;height:30px" name="name"></div>
-                    <br>
-                    <!--层级联动选择框-->
-                    <div>*城市: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                      <select id="loc_province" class="sheng" name="sheng" style="width:117px;height:30px; "></select>
-                      <select id="loc_city" class="shi" name="shi" style="width:117px;height:30px;"></select>
-                      <select id="loc_town" class="xian" name="xian" style="width:117px;height:30px;"></select>
-                    </div>
-                    <script type="text/javascript">$(document).ready(function() {
-                                   showLocation();
-                                   $('#addresses .attr').each(function() {
-                                     var str = $(this).attr('attr');
-                                     var info = getInfo(str);
-                                     $(this).html(info);
-                                   });
+        
 
 
-                                   //定义获取城市信息方法
-                                   function getInfo(str) {
-                                     //console.log(str);
-                                     //拆分字符串
-                                     var arr = str.split(',');
-                                     // console.log(arr);  
-                                     var ls = new Location;
-                                     var l = ls.items;
-                                     // console.log(l['0,1,2']['5']);
-                                     var sheng = l['0'][arr[0]];
-                                     var shi = l['0,' + arr[0]][arr[1]];
-                                     var xian = l['0,' + arr[0] + ',' + arr[1]][arr[2]];
-                                     return sheng + shi + xian;
-                                   }
+<!-- 弹框 -->                  
+<form action="{{url('addr/insert')}}" id="addresses" method="post">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加收货地址</h4></div>
+      <div class="modal-body">
+        <div class="">*收货人:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" style="width:360px;height:30px" name="uname" ></div>
 
 
-                                   //点击选中默认地址
-                                   $('#addresses .item').each(function() {
-                                     $(this).click(function() {
-                                       //
-                                       $('#addresses .item').removeClass('aa');
-                                       $(this).addClass('aa');
-                                       //获取当前点击的地址id
-                                       var id = $(this).attr('aid');
-                                       $('input[name=address_id]').val(id);
-                                     })
-                                   })
-                                 });</script>
-                    <br>
-                    <div class="">*街道地址:&nbsp;
-                      <input type="text" style="width:360px;height:30px" name="name"></div>
-                    <br></div>
-                  <div class="modal-footer">
-                    <button class="btn btn-gray" type="button"  data-dismiss="modal" aria-label="Close">取消</button>
-                    <button class="btn btn-primary">添加</button></div>
-
-                </div>
-              </div>
-            </div>
-        </form>
-    
+        <br>
+        <div class="">*手机号码:&nbsp;
+          <input type="text" style="width:360px;height:30px" name="tel"></div>
+          
+          
+        <br>
+        <!--层级联动选择框-->
+        <div>*城市: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+          <select id="loc_province" name="sheng" style="width:117px;height:30px; "></select>
+          <select id="loc_city" name="shi" style="width:117px;height:30px;"></select>
+          <select id="loc_town" name="xian" style="width:117px;height:30px;"></select>
+        </div>
+         
+        <br>
+        {{csrf_field()}}
+          <div><input type="hidden" id="add" name="addr" value=""></div>
+        <div class="">*街道地址:&nbsp;
+          <input type="text" style="width:360px;height:30px" class="jiedao" name="jiedao"></div>
+        <br></div>
+       
+      <div class="modal-footer">
+      
+        <button   class="btn btn-primary ">添加</button></div>
+    </div>
+  </div>
+</div>
+</form>
+ <script type="text/javascript">
+            showLocation();
+            $('#addresses ').submit(function(){
+                var sheng =  $('#loc_province').val();
+                var shi = $('#loc_city').val();
+                var xian = $('#loc_town').val();
+                var str = sheng+','+shi+','+xian;                     
+               var info = getInfo(str);
+               $('#add').val(info);
+            });
+            //定义获取城市信息方法
+            function getInfo(str){
+              //console.log(str);
+              //拆分字符串
+              var arr = str.split(',');
+              // console.log(arr);  
+              var ls  = new Location;
+              var l = ls.items;
+              // console.log(l['0,1,2']['5']);
+              var sheng = l['0'][arr[0]];
+              var shi = l['0,'+arr[0]][arr[1]];
+              var xian = l['0,'+arr[0]+','+arr[1]][arr[2]];
+              var jiedao = $('[name=jiedao]').val();
+              return [sheng+shi+xian+jiedao];
+            }
+          </script>
         <div class="checkout-box">
             <div class="section section-address">
                 <div class="section-header clearfix">

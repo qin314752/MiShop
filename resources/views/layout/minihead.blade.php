@@ -42,6 +42,7 @@
                     <i class="iconfont"></i></a>
                
             </span>
+            <span><a href="{{url('home/login/logout')}}">退出</a></span>
             <span class="sep">|</span>
             <a target="_blank" href="" class="link link-order" rel="nofollow" >我的订单</a>
         </div>
@@ -115,19 +116,19 @@
                             <ul class="children-list clearfix">
                                                             <li class="first">
                                     <div class="figure figure-thumb">
-                                        <a href="//www.lampmaster.com/mimax/"><img src="Picture/placeholder-220!110x110.png"  alt="小米Max" width="160" height="110" /></a>
+                                        <a href="//www.lampmaster.com/mimax/"><img src="/Picture/placeholder-220!110x110.png"  alt="小米Max" width="160" height="110" /></a>
                                     </div>
                                     <div class="title"><a href="//www.lampmaster.com/mimax/">小米Max</a></div>
                                     <p class="price">1499元起</p>                                                                    </li>
                                                             <li>
                                     <div class="figure figure-thumb">
-                                        <a href="//www.lampmaster.com/mi5/"><img src="Picture/placeholder-220!110x110.png"  alt="小米手机5" width="160" height="110" /></a>
+                                        <a href="//www.lampmaster.com/mi5/"><img src="/Picture/placeholder-220!110x110.png"  alt="小米手机5" width="160" height="110" /></a>
                                     </div>
                                     <div class="title"><a href="//www.lampmaster.com/mi5/">小米手机5</a></div>
                                     <p class="price">1999元起</p>                                                                    </li>
                                                             <li>
                                     <div class="figure figure-thumb">
-                                        <a href="//www.lampmaster.com/mi4c/"><img src="Picture/placeholder-220!110x110.png"  alt="小米手机4c" width="160" height="110" /></a>
+                                        <a href="//www.lampmaster.com/mi4c/"><img src="/Picture/placeholder-220!110x110.png"  alt="小米手机4c" width="160" height="110" /></a>
                                     </div>
                                     <div class="title"><a href="//www.lampmaster.com/mi4c/">小米手机4c</a></div>
                                     <p class="price">1099元</p>                                                                    </li>

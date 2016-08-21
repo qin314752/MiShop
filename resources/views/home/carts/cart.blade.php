@@ -60,7 +60,7 @@
                 </div>
                   <input type="hidden" class="id1" name="id" value="{{$v->id}}">
 
-                <div class="col col-total" >小计
+                <div class="col col-total xiaoji" >小计
                 </div>
                 <div class="col col-action ">
                   <a href="javascript:void(0);" title="删除" class="del J_delGoods ">
@@ -75,16 +75,7 @@
       </div>
   </div>
   <script type="text/javascript">
-    $('.col-total').each(function()
-    {
-        var xjnum = $(this).siblings('.xjnum').find('[name=num]').val();
-        alert(xjnum);  
-        var xjprice = $(this).siblings('.xjprice').val();
-        $(this).val(xjprice*xjnum);
-    })
     
-
-    .val()
   </script>
 
   <div id="J_cartBar" class="cart-bar clearfix">
@@ -101,7 +92,7 @@
       <i id="J_cartActivityMoney">0</i>元</span>
     <span class="total-price">合计（不含运费）：
       <em id="J_cartTotalPrice">总价XX</em>元</span>
-    <a id="J_goCheckout" class="btn btn-a btn btn-primary" href="javascript:void(0);">去结算</a>
+    <a id="J_goCheckout" class="btn btn-a btn btn-primary" href="{{url('/checkout/pay ')}}">去结算</a>
     <div id="J_noSelectTip" class="no-select-tip hide">请勾选需要结算的商品
       <i class="arrow arrow-a"></i>
       <i class="arrow arrow-b"></i>
@@ -109,6 +100,7 @@
   </div>
   </div>
           <script type="text/javascript">
+          yunsuan();
           //减少数量
           $('.jian ').click(function() {
               var num = parseInt($(this).next().val());
@@ -126,7 +118,7 @@
                 });
               $(this).next('input').val(num);
                 $(this).parents('.tp').siblings('.col-total').html(price);  
-            
+              yunsuan();
             });
 
           //添加数量
@@ -146,7 +138,7 @@
                 });
               $(this).prev('input').val(num);
                 $(this).parents('.tp').siblings('.col-total').html(price);
-           
+                yunsuan();
             });
 
           //删除商品
@@ -158,9 +150,25 @@
                if(data==1){
 
                    de.parents('.item-row').remove();
+            yunsuan();
                }
                 });
           });
+          function yunsuan()
+          {
+
+            //计算小计
+            var zongjia = 0;
+            $('.xiaoji').each(function()
+            {
+                var xjnum = $(this).siblings('.xjnum').find('input').val();
+                var xjprice = $(this).siblings('.xjprice').html();
+                $(this).html(xjprice*xjnum);
+                zongjia += parseInt(xjprice*xjnum);
+            })
+            //总价
+            $('#J_cartTotalPrice').html(zongjia);
+          }
             </script>
        
   

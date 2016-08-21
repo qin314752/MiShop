@@ -318,7 +318,11 @@ class LoginController extends Controller
 			
 		}			
 	} 
-
+	public function getLogout(Request $request)
+	{
+		$request->session()->forget('user');
+		return redirect('/');
+	}
 
 
 

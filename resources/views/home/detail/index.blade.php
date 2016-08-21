@@ -72,8 +72,7 @@
                                 <dd class="goods-info-head-userfaq">
                                     <ul>
                                         <li class="J_scrollHref" data-href="#goodsComment" data-index="2">
-                                            <i class="iconfont"></i>评价
-                                            <b>1800</b>
+                                           <a href="/commlist/index?id={{$good->id}}">评价</a>
                                         </li>
                                         <li class="J_scrollHref mid" data-href="#goodsFaq" data-index="3">
                                             <i class="iconfont"></i>提问

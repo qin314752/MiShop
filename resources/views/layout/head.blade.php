@@ -11,7 +11,6 @@
 <meta name="viewport" content="width=1226" />
 <link rel="shortcut icon" href="//www.lampmaster.com/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="//www.lampmaster.com/favicon.ico" type="image/x-icon" />
-<!-- <link href="/Css/bootstrap.min.css" rel="stylesheet"> -->
 <link rel="stylesheet" href="/Css/base.min.css" >
 <link rel="stylesheet" href="/Css/index.min.css">
 <link rel="stylesheet" href="/Css/list.min.css">
@@ -19,8 +18,6 @@
 <link rel="stylesheet" href="/Css/goods-detail.min.css">
 <link rel="stylesheet" href="/Css/checkout.min.css">
 <link rel="stylesheet" href="/Css/goods-comment-detail.min.css">
-<!-- <link rel="stylesheet" href="/Css/cart.css"> -->
-
 <script src="/Scripts/jquery.min.js"></script>
 <script src="/Scripts/bootstrap.min.js"></script>
 </head>
@@ -39,13 +36,14 @@
         @if(session('user'))
         <div id="J_userInfo" class="topbar-info">
             <span class="user">
-                <a target="_blank" href="url('/ucenter')" class="user-name" rel="nofollow" >
+                <a target="_blank" href="{{url('/ucenter')}}" class="user-name" rel="nofollow" >
                     <span class="name">{{session('user')->email}}</span>
                     <i class="iconfont"></i></a>
                
             </span>
+            <span><a href="{{url('home/login/logout')}}">退出</a></span>
             <span class="sep">|</span>
-            <a target="_blank" href="" class="link link-order" rel="nofollow" >我的订单</a>
+            <a target="_blank" href="{{url('/order')}}" class="link link-order" rel="nofollow" >我的订单</a>
         </div>
         @else
         <div class="topbar-info" id="J_userInfo">

@@ -356,6 +356,56 @@
                     </li>
                     <li class="">
                         <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon  fa fa-external-link"></i>
+                            <span class="menu-text">订单管理</span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="{{url('admin/order')}}">
+                                    <i class="menu-icon fa fa-plus purple"></i>查看订单</a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon  fa fa-external-link"></i>
+                            <span class="menu-text">权限管理</span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="{{url('admin/qx/add')}}">
+                                    <i class="menu-icon fa fa-plus purple"></i>添加权限</a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="{{url('admin/qx')}}">
+                                    <i class="menu-icon fa fa-plus purple"></i>查看权限</a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon  fa fa-external-link"></i>
+                            <span class="menu-text">商品评价</span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="{{url('admin/comment')}}">
+                                    <i class="menu-icon fa fa-plus purple"></i>查看评价</a>
+                                <b class="arrow"></b>
+                            </li>
+                         </ul> 
+                    </li>  
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
                             <i class="menu-icon fa-coffee  fa"></i>
                             <span class="menu-text">导航列表</span>
                             <b class="arrow fa fa-angle-down"></b>

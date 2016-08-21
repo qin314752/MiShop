@@ -1,21 +1,23 @@
 @extends('layout.index')
 @section('title', '用户列表')
-@section('content')
+@section('content')                     
 <style type="text/css">
   .a{float:right;}
 </style>
-
 <div class="col-xs-11">
-
   <div class="table-header">user list</div>
-
+      <div class="alert alert-info"  id='suc' style="display:none">
+           删除成功
+      </div>
+      <div class="alert alert-info"  id='fal' style="display:none">
+           删除失败
+      </div>
       <form action="{{url('/admin/user/index')}}" method="get">
       <!-- 闪存中的信息 -->
       @if(session('success'))
-<div class="alert alert-info">
-            {{session('success')}}
-               
-</div>
+        <div class="alert alert-info">
+                    {{session('success')}}                      
+        </div>
       @endif
     <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
       <div class="row">
@@ -39,7 +41,6 @@
             </form>
           </div>
         </div>
-
         <div class="col-xs-6 ">
           <div id="dynamic-table_filter" class="dataTables_filter">
             <label>查找:
@@ -71,7 +72,6 @@
           </tr>
         </thead>
         <tbody>
-
         @foreach($user as $k=>$v)
           <tr role="row" class="odd">
             <td class="center">
@@ -86,7 +86,7 @@
             <td class="hidden-480">{{$v->username}}</td>
             <td class="hidden-480">{{$v->email}}</td>
             <td class="hidden-480" ><img width="50px"src="{{$v->pic}}" alt=""></td>            
-            <td class="hidden-480">{{str_replace([1,2],['未激活','激活'],$v->status)}}</td>            
+            <td class="hidden-480">{{str_replace([1,2],['未激活','激活'],$v->status)}}</td>         
             <td> 
               <div class="hidden-sm hidden-xs action-buttons">
                <!-- 编辑 -->
@@ -131,11 +131,9 @@
             </td>
           </tr>
         @endforeach
-          <tr role="row" class="even">
-           
+          <tr role="row" class="even">          
               </tbody>
-            </table>
-  
+            </table> 
      <div class="a"> {!! $user->appends($request)->render() !!} </div>
     </div>
   </div>
@@ -143,7 +141,6 @@
     </div>
   </div>
 </div>
-
  <script src="/assets/js/jquery.2.1.1.min.js"></script>
 <script type="text/javascript">
   // alert($);
@@ -164,11 +161,13 @@
         }
         });
        */
-
        $.get('{{url("/admin/user/delete")}}',{id:id},function(data){
             // console.log(data);
             if(data==1){
                 btn.parents('tr').remove();
+                $('#suc').show();
+            }else{
+                $('#fal').show();
             }
        });
         return false;
