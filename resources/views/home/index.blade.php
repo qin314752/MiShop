@@ -7,7 +7,7 @@
             <div id="J_homeSlider" class="xm-slider" data-stat-title="焦点图轮播" style="width: auto; position: relative;">
             @foreach($slides as $k=>$v)
                 <div class="slide loaded" scount="{{count($slides)}}" id="{{$k}}" style="float: none; list-style: none; position: absolute; width: 1226px; display: none;">
-                    <a href="#"  target="_blank"  onclick="">
+                    <a >
                         <img src="{{$v->pic}}"></a>
                 </div>
             @endforeach  
@@ -17,7 +17,7 @@
             <div class="ui-pager ui-default-pager">
             @foreach($slides as $k=>$v)
                 <div class="ui-pager-item">
-                    <a href="" pic-id={{$k}} class="ui-pager-link "  onclick="javascript:void(0)">1</a>
+                    <a  pic-id={{$k}} class="ui-pager-link "  >1</a>
                 </div>
             @endforeach 
             </div>
@@ -31,26 +31,52 @@
                 var slen = $('.loaded').attr('scount');
                 $('.ui-prev').click(function()
                 {
-                    if(--i == -1)
-                        {i == slen-1}
-                    act(i);
+                   moveL();
                 });
                 $('.ui-next').click(function()
                 {
-                    if(++i == slen)
-                        {i = 0}
-                    act(i);
+                   moveR();
                 })
                 
-                var inte = setInterval(act(i),1000)
-                
-                function act(n)
-                {
-                    $('.slide').fadeOut(1000);
-                    $('.slide').eq(n).fadeIn(1000);
+                var inte = setInterval(moveR,3000)
+                $('.side').hover(function()
+                    {
+                    //清除定时器
+                    clearInterval(inte);
+                    },function(){
+                        //启动轮播
+                    inte = setInterval(moveR,3000);
+                    })
+                //给小圆点绑定单击事件
+                $('.ui-pager-link').click(function(){
+                    //获取当前索引
+                    i = $(this).index();
+                    $('.slide').eq(i).show().siblings().hide();
+                    //设置点的样式
+                    $('.ui-pager-link').eq(i).addClass('active').siblings().removeClass('active');
+
+                })
+
+                //封装向右移动的方法
+                function moveR(){
+                    i++;
+                    if(i == slen){
+                        i = 0;
+                    }
+                    $('.slide').eq(i).show().siblings().hide();
                     $('.ui-pager-link').removeClass('active');
-                    $('.ui-pager-link').eq(n).addClass('active');
-                    n++;
+                    $('.ui-pager-link').eq(i).addClass('active');
+                }
+                //封装向左移动的方法
+                function moveL(){
+                    i--;
+                    if(i == -1){
+                        i = slen-1;
+                    }
+                    $('.slide').eq(i).show().siblings().hide();
+                    //设置点的样式
+                    $('.ui-pager-link').removeClass('active');
+                    $('.ui-pager-link').eq(i).addClass('active');
                 }
                 
 
@@ -184,7 +210,7 @@
                         <li class="J_xm-recommend-list span4">
                             <dl>
                                 <dt>
-                                    <a href="" target="_blank" onclick=""><img src="{{$v->pic}}" width="140" height="140"></a>
+                                    <a href="{{url('/detail/index',['id'=>$v->id])}}" target="_blank" onclick=""><img src="{{$v->pic}}" width="140" height="140"></a>
                                 </dt>
                                 <dd class="xm-recommend-name">
                                     <a href="" data-stat-method="1_13" onclick="">{{$v->name}}</a></dd>
@@ -207,7 +233,7 @@
                 @foreach($recs as $k=>$v)
                 <li class="review-item" data-gid="2135200033">
                     <div class="figure figure-img">
-                        <a href="" target="_blank" data-stat-id="AA10855+2_38_2_227" onclick="">
+                        <a href="{{url('/detail/index',['id'=>$v->id])}}" target="_blank" >
                         <img src="{{$v->pic}}" width="296" height="220" ></a>
                     </div>
                     <p class="review">

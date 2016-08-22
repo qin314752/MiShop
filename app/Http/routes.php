@@ -27,6 +27,7 @@ Route::Controller('/commlist','home\CommlistController');//商品评价显示
 //后台首页
 Route::get('/admin','AdminController@index');
 //权限管理
+
 Route::Controller('/admin/qx','admin\QxController');
 Route::Controller('/admin/comment','admin\CommentController');//后台评论管理
 Route::Controller('/admin/user','admin\UserController');//用户管理
@@ -35,3 +36,4 @@ Route::Controller('/admin/nav','admin\NavController');//导航菜单管理
 Route::Controller('/admin/flink','admin\FlinkController');//友情链接
 Route::Controller('/admin/goods_cate','admin\Goods_cateController');//商品分类
 Route::Controller('/admin/order','admin\OrderController');//后台订单
+Route::Controller('/admin/config','admin\ConfigController');//网站配置

@@ -444,6 +444,21 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon  fa fa-external-link"></i>
+                            <span class="menu-text">网站管理</span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="{{url('admin/config')}}">
+                                    <i class="menu-icon fa fa-plus purple"></i>网站管理中心</a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
                 <!-- /.nav-list -->
                 <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -532,7 +547,62 @@
             <script src="/assets/js/jquery.2.1.1.min.js"></script>
                         
                     @section('content')
-                        <h1>这里是MiShop后台首页</h1>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- PAGE CONTENT BEGINS -->
+                                <div class="alert alert-block alert-success">
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <i class="ace-icon fa fa-times"></i>
+                                    </button>
+
+                                    <i class="ace-icon fa fa-check green"></i>
+
+                                    欢迎来到
+                                    <strong class="green">
+                                        MiShop
+                                        <small>(v1.0)</small>
+                                        后台管理系统
+                                    </strong>
+                                    
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12  col-md-7 pricing-box">
+                                        <div class="widget-box widget-color-blue">
+                                            <div class="widget-header">
+                                                <h5 class="widget-title bigger lighter">系统信息</h5></div>
+                                            <div class="widget-body">
+                                                <div class="widget-main">
+                                                    <ul class="list-unstyled spaced8">
+                                                        <li>
+                                                            <label class="res-lab">操作系统</label><span class="res-info"></span><?php echo PHP_OS ?></span>
+                                                        </li>
+                                                        <li>
+                                                            <label class="res-lab">运行环境</label><span class="res-info"><?php  echo $_SERVER ['SERVER_SOFTWARE']; ?></span>
+                                                        </li>
+                                                        <li>
+                                                            <label class="res-lab">PHP版本</label><span class="res-info"><?php echo PHP_VERSION ?></span>
+                                                        </li>
+                                                        <li>
+                                                            <label class="res-lab">上传附件限制</label><span class="res-info">2M</span>
+                                                        </li>
+                                                        <li>
+                                                            <label class="res-lab">北京时间</label><span class="res-info"><?php echo date('Y-m-d H:i:s') ?></span>
+                                                        </li>
+                                                    </ul>
+                                                    <hr>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <!-- PAGE CONTENT ENDS -->
+                            </div><!-- /.col -->
+                        </div>
                     @show
                     </div></div></div>
                     <!-- /.page-content --></div>

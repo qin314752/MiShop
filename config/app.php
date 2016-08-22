@@ -195,5 +195,11 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
     ],
+    'WEBTITLE' =>'小米商城1',
+        'HTTP_KEYWORDS' => 'LAMP148 MiShop小组',
+        'HTTP_DESCRIPTION' =>'仿小米商城1',
+        'HTTP_COPY' => '京ICP证11010802020134号',
+        'HTTP_LOGO' => '/uploads/3a5d1395609539f01071070806979dbd.jpg',
+
 
 ];

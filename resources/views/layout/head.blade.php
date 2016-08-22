@@ -89,20 +89,26 @@
                             @endforeach
                         </ul>
                         <script type="text/javascript">
-                            $('.ecatgory-item').hover(function()
-                                {
-                                    $(this).addClass('category-item-active');
-                                });
-                            $('.iconfont').mouseover(function()
-                                {
-                                    $(this).parents('.ecatgory-item').addClass('category-item-active');
-                                });
+                            // $('.ecatgory-item').hover(function()
+                            //     {
+                            //         $(this).addClass('category-item-active');
+                            //     });
+                            // $('.iconfont').mouseover(function()
+                            //     {
+                            //         $(this).parents('.ecatgory-item').addClass('category-item-active');
+                            //     });
                             
-                            $('.ecatgory-item').mouseout(function()
-                                {
-                                    $(this).removeClass('category-item-active');
-                                });
-                            
+                            // $('.ecatgory-item').mouseout(function()
+                            //     {
+                            //         $(this).removeClass('category-item-active');
+                            //     });
+                            $("#J_categoryList").children().hover(function(){
+                                $(this).css("background","#ff6700");
+                                $(this).children(".star-goods").css("border","1px solid #F0F0F0").show();
+                            },function(){
+                                $(this).css("background","none");
+                                $(this).children(".star-goods").css("border","0px solid #F0F0F0").hide();
+                            })
                         </script>
                     </div>
                     @show
