@@ -126,8 +126,8 @@ class LoginController extends Controller
 			// dd($aa);
 
 			// dd($ee);
-			if(empty($request->input('password'))&&empty($request->input('repassword'))){
-			return  view('home/login/pass',['email'=>$email])->withErrors('密码不能为空');
+			if(empty($request->input('password'))&&empty($request->input('repassword'))&&empty($request->input('username'))){
+			return  view('home/login/pass',['email'=>$email])->withErrors('用户名 密码 	不能为空');
 			
 			}
 
@@ -171,8 +171,8 @@ class LoginController extends Controller
 	            $arr['status'] = 2;	            
 	            //执行数据插入
 	            $strr = DB::table('ms_user') ->where('id', $arr['id']) ->update(['token' =>$arr['token'], 'status' =>$arr['status']]);
-
-	            return redirect(url('home/login/success1'));
+	            session(['user'=>$str]);
+	            return redirect(url('home/login/success'));
 	        } else {
 
 	            return redirect(url('home/login/error'));

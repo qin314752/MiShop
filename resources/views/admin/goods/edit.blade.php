@@ -58,7 +58,7 @@
           <label for="name" class="control-label col-xs-12 col-sm-3 no-padding-right">商品库存 :</label>
           <div class="col-xs-12 col-sm-9">
             <div class="clearfix">
-              <input type="text" class="col-xs-12 col-sm-5" value="{{$goods->strorage_num}}" name="strorage_num">
+              <input type="text" class="col-xs-12 col-sm-5" value="{{$goods->storage_num}}" name="storage_num">
             </div>
           </div>
         </div>

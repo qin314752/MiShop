@@ -76,10 +76,10 @@
                                     <ul class="children-list children-list-col children-list-col-1">
                                         @foreach($v->sub as $kk=>$vv )   
                                         <li class="star-goods">
-                                            <a class="link" href="#" data-stat-id="dcbd42ece248cddf" onclick="">
+                                            <a class="link" href="{{url('/list/index',['c'=>$vv->id])}}" data-stat-id="dcbd42ece248cddf" onclick="">
                                                 <img class="thumb" src="/Images/mipad2-16!160x110.jpg" data-src="#" width="40" height="40" alt="">
                                                 <span class="text">{{$vv->name}}</span></a>
-                                            <a class="btn btn-line-primary btn-small btn-buy" href="#" data-stat-id="79cf129bec5862f2" onclick="">选购</a>
+                                            <a class="btn btn-line-primary btn-small btn-buy" href="{{url('/list/index',['c'=>$vv->id])}}" >选购</a>
                                         </li>
                                         @endforeach
                                     </ul>
@@ -104,10 +104,10 @@
                             //     });
                             $("#J_categoryList").children().hover(function(){
                                 $(this).css("background","#ff6700");
-                                $(this).children(".star-goods").css("border","1px solid #F0F0F0").show();
+                                $(this).children(".children").css("border","1px solid #F0F0F0").show();
                             },function(){
                                 $(this).css("background","none");
-                                $(this).children(".star-goods").css("border","0px solid #F0F0F0").hide();
+                                $(this).children(".children").css("border","0px solid #F0F0F0").hide();
                             })
                         </script>
                     </div>

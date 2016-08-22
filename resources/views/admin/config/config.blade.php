@@ -50,7 +50,7 @@
             <div class="col-sm-4">
 
               <input type="file" style=""  name="logo" id="form-input-readonly" class="col-xs-10 col-sm-3" >
-            <div><img style="float:left" src="{{$logo}}"></div>
+            <div><img style="float:left" src="{{$logo}}" width="55px" height="55px"></div>
             </div>
           </div>
                 

@@ -88,7 +88,7 @@
             <td class="hidden-480">{{$v->cid}}</td>
             <td class="hidden-480" ><img width="50px"src="{{$v->pic}}" alt=""></td>                      
             <td class="hidden-480">{{$v->price}}</td>            
-            <td class="hidden-480">{{$v->strorage_num}}</td>            
+            <td class="hidden-480">{{$v->storage_num}}</td>            
             <td> 
               <div class="hidden-sm hidden-xs action-buttons">
                <!-- 编辑 -->

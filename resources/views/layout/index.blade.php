@@ -356,7 +356,7 @@
                     </li>
                     <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon  fa fa-external-link"></i>
+                            <i class="menu-icon fa fa-credit-card"></i>
                             <span class="menu-text">订单管理</span>
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
@@ -371,7 +371,7 @@
                     </li>
                     <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon  fa fa-external-link"></i>
+                            <i class="menu-icon  fa fa-users"></i>
                             <span class="menu-text">权限管理</span>
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
@@ -391,7 +391,7 @@
                     </li>
                      <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon  fa fa-external-link"></i>
+                            <i class="menu-icon  fa fa-comment"></i>
                             <span class="menu-text">商品评价</span>
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
@@ -406,7 +406,7 @@
                     </li>  
                     <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa-coffee  fa"></i>
+                            <i class="menu-icon fa-tachometer  fa"></i>
                             <span class="menu-text">导航列表</span>
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
@@ -446,7 +446,7 @@
                     </li>
                     <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon  fa fa-external-link"></i>
+                            <i class="menu-icon  fa fa-cogs"></i>
                             <span class="menu-text">网站管理</span>
                             <b class="arrow fa fa-angle-down"></b>
                         </a>

@@ -44,7 +44,7 @@
                                   <table width="378" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed;" class="header-row">
                                     <tbody>
                                       <tr>
-                                        <td width="378" valign="top" align="left" style="font-family: Arial, sans-serif; font-weight: normal; line-height: 19px; color: #478fca; margin: 0px; font-size: 18px; padding-bottom: 10px; padding-top: 15px;" class="header-row-td">  <h3 style="text-align:center">邮件已发送 请前去激活</h3><br><br><p style="text-align:center"><span id="ti"></span>秒&nbsp;跳转到 {{$aa}}邮箱页面</p></td></tr>
+                                        <td width="378" valign="top" align="left" style="font-family: Arial, sans-serif; font-weight: normal; line-height: 19px; color: #478fca; margin: 0px; font-size: 18px; padding-bottom: 10px; padding-top: 15px;" class="header-row-td">  <h3 style="text-align:center">邮件已发送 请前去激活</h3><br><br><p style="text-align:center"><span id="ti"></span>秒&nbsp;跳转到 邮箱页面</p></td></tr>
                                     </tbody>
                                   </table>
                                   <div style="font-family: Arial, sans-serif; line-height: 20px; color: #444444; font-size: 13px;">

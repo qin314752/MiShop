@@ -39,7 +39,10 @@
        </ul>
      </div>    
    @endif
-      
+            <div class="inputbg">
+                <label for="" class="labelbox">
+                  <input type="text" placeholder="请输入用户名" name="username" data-error=".error-username" class="set-username"></label>
+              </div>
                   <div class="inputbg">
                 <label for="" class="labelbox">
                   <input type="password" placeholder="请输入密码" name="password" data-error=".error-password" class="set-password"></label>

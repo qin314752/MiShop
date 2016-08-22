@@ -44,7 +44,7 @@
                                   <table width="378" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed;" class="header-row">
                                     <tbody>
                                       <tr>
-                                        <td width="378" valign="top" align="left" style="font-family: Arial, sans-serif; font-weight: normal; line-height: 19px; color: #478fca; margin: 0px; font-size: 18px; padding-bottom: 10px; padding-top: 15px;" class="header-row-td">  <h3 style="text-align:center">密码重置成功</h3><br><br><p style="text-align:center"><span id="ti"></span>秒&nbsp;; 跳转到首页</p></td></tr>
+                                        <td width="378" valign="top" align="left" style="font-family: Arial, sans-serif; font-weight: normal; line-height: 19px; color: #478fca; margin: 0px; font-size: 18px; padding-bottom: 10px; padding-top: 15px;" class="header-row-td">  <h3 style="text-align:center">激活成功</h3><br><br><p style="text-align:center"><span id="ti"></span>秒&nbsp;; 跳转到首页</p></td></tr>
                                     </tbody>
                                   </table>
                                   <div style="font-family: Arial, sans-serif; line-height: 20px; color: #444444; font-size: 13px;">
@@ -154,33 +154,6 @@
     </tbody>
   </table>
 </body>
-
-     
-
-      <script type="text/javascript">
-          
-    var ti = document.getElementById('ti');
-    var i = 3;
-    aa()
-    var a = setInterval(aa,1000);
-    function aa()
-    {
-      ti.innerHTML =i;
-      i--;
-
-      if (i == -1) {clearInterval(a)
-
-      }
-      if(i==-1){
-        window.location.href='http://www.lampmaster.com';
-        
-    }
-  
-
-
-        
-      }
-      </script>
 
 
 
