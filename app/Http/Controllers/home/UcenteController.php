@@ -55,18 +55,23 @@ class UcenteController extends Controller
 
 
 //修改
-	public function getUpdate(Request $request)
+	public function postUpdate(Request $request)
 	{
-		$user = $request->all();
-
-		// dd($user);	
-		$id = session('user')->id;
-		$str = DB::table('ms_user')->where('id',$id)->update(['username'=>$user['username']]);
-		// dd($str);
-		if($str){
-			echo 1;
+		$user = $request->only(['username','tel']);
+		if($request->input('sex')==1){
+			$user['sex']='女';	
 		}else{
-			echo 2;
+			$user['sex']='男';	
+
+		}	
+		$id = session('user')->id;
+		$str = DB::table('ms_user')->where('id',$id)->update(['username'=>$user['username'],'tel'=>$user['tel'],'sex'=>$user['sex']]);
+		
+		if($str){
+			return  redirect(url('/ucenter/sele/'));
+		}else{
+			return  back();
+		
 		}
 
 
@@ -82,9 +87,9 @@ class UcenteController extends Controller
             // 文件后缀名的获取
             $suffix = $request->file('pic')->getClientOriginalExtension();
             // 判断文件上传的类型
-            $arr = ['jpg','png','gif'];
+            $arr = ['jpg','JPG','png','gif'];
             if(!in_array($suffix,$arr)){
-                echo '上传文件不符合要求';die;
+                 '上传文件不符合要求';die;
             }
             $request->file('pic')->move('./uploads/',$name.'.'.$suffix);
             // 将文件路径及文件名称返回
@@ -92,37 +97,20 @@ class UcenteController extends Controller
        }
 
     }
-	public function getTel(Request $request)
-	{
-		$user = $request->all();
-
-		// dd($user);	
-		$id = session('user')->id;
-		$str = DB::table('ms_user')->where('id',$id)->update(['tel'=>$user['tel']]);
-		// dd($str);
-		if($str){
-			echo 1;
-		}else{
-			echo 2;
-		}
 
 
-	}
-public function getSex(Request $request)
-	{
-		$user = $request->all();
-
-		// dd($user);	
-		$id = session('user')->id;
-		$str = DB::table('ms_user')->where('id',$id)->update(['sex'=>$user['sex']]);
-		// dd($str);
-		if($str){
-			echo 1;
-		}else{
-			echo 2;
-		} 	
 
 
-	}
+
+
+
+
+
+
+
+
+
+
+
 
  }

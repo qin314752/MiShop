@@ -16,7 +16,7 @@
                               <tr>
                                 <td align="left" class="pb20" style="padding:0px 0 35px 0px;">
                                   <a href="https://www.yinxiang.com/" target="_blank">
-                                    <img width="230" height="47" class="header" style="display: block; border: none;" src="/logo/logo.png"></a>
+                                    <!-- <img width="230" height="47" class="header" style="display: block; border: none;" src="/logo/logo.png"> --></a>
                                 </td>
                               </tr>
                             </tbody>

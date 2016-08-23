@@ -1,0 +1,1209 @@
+
+  
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>小米帐号 - 个人信息</title>
+
+
+		<link type="text/css" rel="stylesheet" href="https://account.xiaomi.com/static/res/23f48a9/account-static/respassport/acc-2014/css/reset.css">
+<link type="text/css" rel="stylesheet" href="https://account.xiaomi.com/static/res/74f4efa/account-static/respassport/acc-2014/css/layout.css">
+
+		<link type="text/css" rel="stylesheet" href="https://account.xiaomi.com/static/res/c411edf/account-static/respassport/HtmlResource/cssSass/css/modacctip.css">
+
+		
+	
+<style type="text/css">
+/*启用修改头像功能*/
+.na-img-area:hover .na-edit{
+	display:block;
+	cursor: pointer;
+}
+.na-img-area{cursor:default}
+/*popup的遮层*/
+.popup_mask{
+	position:fixed;
+	z-index:99;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	display:none;
+	_position:absolute;
+	_height: 1000px;
+}
+.popup_mask .mod_wrap{
+    height: 100%;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.popup_mask .bkc{
+	position:absolute;
+	width:100%;
+	height:200%;
+	left:0;
+	top:0;
+	background-color:#333;
+	filter: alpha(opacity=70);
+	opacity:0.7;
+}
+.popup_mask .mod_acc_tip{
+	display:none;
+	position:absolute;
+	left:50%;
+	margin-left:-206px;
+	top:50%;
+	margin-top:-187px;
+	_top: 500px;
+}
+/*剪切图片的水平、垂直居中及模糊*/
+.clipimg{
+	text-align: left;
+	position: relative;
+}
+.clipimg img{
+	max-width:300px;
+	max-height:300px;
+	/*
+	filter: alpha(opacity=70);
+	opacity: .7;
+	*/
+	position: absolute;
+}
+/*clip部分*/
+.clipimg .movebox{
+/*
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	*/
+	border: 1px solid #00aeff;
+}
+.uploadimgs{
+	filter: none;
+	opacity: 1;
+}
+.clipimg .movebox{
+	width: 98px;
+	height: 98px;
+	z-index:1000;
+	background-image:url(#);
+}
+.clipimg .icon_square_rightbot{
+	cursor: se-resize;
+}
+/*上传*/
+#photoUploader .uplodefile{
+	font-size: 45px;
+	*vertical-align: bottom;
+}
+::-webkit-file-upload-button { cursor:pointer; }
+/*干掉该死的IE6的遮罩问题*/
+#loadingMask .bkc{
+	_height:2000px;
+}
+/*wap*/
+.bugfix_ie6{ display:block;}	
+</style>
+</head>
+<body class="zh_CN">
+	<div class="popup_mask" style="display:block;" id="loadingMask">
+		<div class="bkc"></div>
+		<div class="mod_wrap loadingmask">
+			
+		</div>
+	</div>
+  <div class="wrapper blockimportant">
+  <div class="wrap">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+
+
+  
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+
+  
+
+<div class="layout bugfix_ie6 dis_none">
+  <div class="n-logo-area clearfix">
+    <a href="/" class="fl-l">
+      <img src="/static/res/fa93d30/passport/acc-2014/img/n-logo.png" srcset="/static/res/fa93d30/passport/acc-2014/img/n-logo.png 1x, /static/res/fb6d739/account-static/respassport/acc-2014/img/n-logo@2x.png 2x"/>
+    </a>
+    
+      <a id="logoutLink" class="fl-r logout" 
+          href="/pass/logout?userId=1135754503&callback=https://account.xiaomi.com">
+          退出
+      </a>
+	  <script>
+	  setTimeout(function(){
+		  if(location.hostname === 'account.xiaomi.com'){return;}
+		  var link = document.getElementById('logoutLink');
+		  if(link){
+			  var href = link.getAttribute('href');
+			  var a = document.createElement('a');
+			  a.setAttribute('href','/');
+			  var homeURL = a.href;
+			  href = href.replace(/\&callback\=.*$/, '&callback=' + homeURL);
+			  link.setAttribute('href', href);
+			  a = null;
+		  }
+	  },100);
+	  </script>
+    
+  </div>
+  
+    <!--头像 名字-->
+	<div class="n-account-area-box">
+		<div class="n-account-area clearfix">
+		  <div class="na-info">
+			<p class="na-name" style="color:#999;font-weight:normal;">请设置名字</p>
+			<p class="na-num">1135754503</p>
+		  </div>
+		  <div class="na-img-area fl-l">
+      <!--na-img-bg-area不能插入任何子元素-->
+      <div class="na-img-bg-area"></div>
+		  </div>
+		</div>
+	</div>
+  
+</div>
+
+	<div class="layout">
+      <div class="n-main-nav clearfix">
+        <ul>
+          <li>
+            <a href="/pass/auth/security/home" title="帐号安全">帐号安全</a>
+            <em class="n-nav-corner"></em>
+          </li>
+          <li class="current">
+            <a title="个人信息">个人信息</a>
+            <em class="n-nav-corner"></em>
+          </li>
+          <!--<li>
+            <a href="">登录设备</a>
+            <em class="n-nav-corner"></em>
+          </li>-->
+          <li>
+            <a href="/pass/auth/sns/home" title="绑定授权">绑定授权</a>
+            <em class="n-nav-corner"></em>
+          </li>
+          <li>
+            <a href="/pass/auth/services/home" title="小米服务">小米服务</a>
+            <em class="n-nav-corner"></em>
+          </li>
+        </ul>
+      </div>
+      <div class="n-frame">
+	<div class="uinfo c_b">
+        <div class="">
+        <div class="main_l">
+          <div class="naInfoImgBox t_c">
+            <div class="na-img-area marauto">
+              <!--na-img-bg-area不能插入任何子元素-->
+              <div class="na-img-bg-area"></div>
+              <em class="na-edit"></em>
+            </div>
+            <div class="naImgLink">
+			  
+				  <a class="color4a9" href="" title="设置头像">设置头像</a>
+				
+            </div>
+          </div>        
+        </div>
+        <div class="main_r">
+          <div class="framedatabox">
+            <div class="fdata">
+              <a class="color4a9 fr" href="" title="编辑" id="editInfo"><i class="iconpencil"></i>编辑</a>
+              <h3>基础资料</h3>    
+            </div>
+            <div class="fdata lblnickname">
+              <p><span>姓名：</span><span class="value" _empty>
+			  
+					<span style="color:#999;">请设置名字</span>
+				
+			  </span></p>     
+            </div>
+            <div class="fdata lblbirthday">
+              <p><span>生日：</span><span class="value" _empty>
+			  
+					
+				
+			  </span></p>     
+            </div>
+            <div class="fdata lblgender">
+              <p><span>性别：</span><span class="value" _empty>
+			  
+					
+				
+			  </span></p>     
+            </div>
+			<div class="btn_editinfo"><a id="editInfoWap" class="btnadpt bg_normal" href="">编辑基础资料</a></div>
+          </div>
+			  <div class="framedatabox">
+				<div class="fdata">
+				  <h3>高级设置</h3>    
+				</div>
+				<div class="fdata click-row">
+				  <a class="color4a9 fr" target="_blank" href="https://www.mipay.com/bankcard?_locale=zh_CN" title="管理">管理</a>              
+				  <p>
+					<span>银行卡</span>					
+					<span class="arrow_r"></span>
+				  </p>     
+				</div>            
+				<div class="fdata click-row">
+				  <a class="color4a9 fr" target="_blank" href="" title="管理" id="switchRegion">修改</a>
+				  <p>
+					  <span>帐号地区：  </span>
+					  <span class="box_center"><em id="region" _code="CN"></em><i class="arrow_r"></i></span>
+				  </p>     
+				</div>
+			  </div>
+        </div>
+        </div>
+		<div class="logout_wap">
+			<a class="btnadpt bg_white" href="/pass/logout?userId=1135754503&callback=https://account.xiaomi.com">退出</a>
+		</div>
+      </div>
+	 </div>
+	</div>
+  </div>
+  </div>
+	<div class="n-footer">
+  <div class="nf-link-area clearfix">
+  <ul class="lang-select-list">
+    <li><a class="lang-select-li" href="javascript:void(0)" data-lang="zh_CN">简体</a>|</li>
+    <li><a class="lang-select-li" href="javascript:void(0)" data-lang="zh_TW">繁体</a>|</li>
+    <li><a class="lang-select-li" href="javascript:void(0)" data-lang="en">English</a></li>
+    
+      |<li><a class="a_critical" href="http://static.account.xiaomi.com/html/faq/faqList.html" target="_blank"><em></em>常见问题</a></li>
+    
+  </ul>
+  </div>
+  <p class="nf-intro"><span>小米公司版权所有-京ICP备10046444-<a class="beianlink beian-record-link" target="_blank"><span></span>京公网安备11010802020134号</a>-京ICP证110507号</span></p>
+</div>
+<script src="https://account.xiaomi.com/static/res/6941994/passport/scripts/jquery-1.8.3.min.js"></script>
+<script src="https://account.xiaomi.com/static/res/64371/scripts/common/more/placeholder.js"></script>
+
+<script>
+$(function(){
+  //语言部分
+  var locale="zh_CN";
+  if(locale!=='zh_CN' && locale!=='zh_TW' && locale!=='en'){
+    locale=locale.indexOf("zh")!==-1?"zh_TW":"en";
+  }
+  var list=$(".lang-select-li");
+  list.each(function(index,item){
+    if($(this).data("lang")===locale){
+      $(this).addClass("current");
+    }
+  });
+  list.bind("click",function(){
+    var selectLocale=$(this).data("lang");
+    var params=location.search.substring(1).split("&");
+    if(locale!==selectLocale){
+      for(var i=0;i<params.length;i++){
+        if(params[i].indexOf("_locale=")===0){
+          params.splice(i,1);i--;
+        }
+      }
+      params.push("_locale="+selectLocale);
+      location.href=("//"+location.host+location.pathname+"?"+params.join("&")+location.hash);
+    }
+  });
+  /*不知道是什么功能部分
+  if($(window).innerWidth() <= 640 && (!/AppName\/[0-9\.]+$/.test(navigator.userAgent) || navigator.standalone)){
+    $('.n-footer').show();
+  }*/
+  /*备案链接上的图片*/
+  var recordLink=$('.beian-record-link');
+  var beianRecordLink="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134";
+  var beianRecordImg="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png";
+  var default1px_gif="data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAABAAEAAAICVAEAOw==";
+  if(recordLink.length && beianRecordLink){
+    recordLink[0].href=beianRecordLink;
+  }
+  var _img=new Image();
+  var _span=$('.beian-record-link span');
+  if(_span){
+    _img.onload=_img.oncomplete=function(){
+      _img._loaded=true;
+      _span.append(_img);
+    }
+    setTimeout(function(){
+      if(!_img._loaded && default1px_gif){
+        _img.src=default1px_gif;
+      }
+    },1000);
+    _img.src=beianRecordImg;
+  }
+
+  /*url 转义*/
+  function  encodeURLparam(links,param){
+    $(links).each(function(index,item){
+      if((item.search+"").indexOf(param)!==-1){
+        //分解参数，encode value
+        var params=item.search.substring(1).split("&");
+        for(var i=0;i<params.length;i++){
+
+          if( (params[i]+"").indexOf(param+"=")===0 ){
+
+            params.splice(i,1, param+"="+encodeURIComponent( (params[i]+"").substring(param.length+1) ) );
+
+            item.search=params.join("&")
+          }
+
+        }
+      }
+    })
+  }
+  encodeURLparam(document.links,'externalId')
+});
+var JSP_VAR={
+  deviceType:'PC',
+  dataCenter:'lg',
+  locale:"zh_CN",
+  region:"CN",
+  callback:"",
+  sid:"",
+  qs:"",
+  hidden:"",
+  "_sign":"",
+  serviceParam :'',
+  privacyLink:'http://www.miui.com/res/doc/privacy/cn.html'
+};
+</script>
+<style>
+  .btn-action-go{ display:none;}
+</style>
+<script>
+/*MIUI  客户端和  authSDK 客户端*/
+  
+  var webviewDisableTip="";
+  var closeStatus="";
+  var webviewDisableTip2="";
+  var webviewDisableBtn="";
+
+  function isWebview(){
+    var result=false;
+    var ua=navigator.userAgent;
+    
+    var authSDK=/passport\/oauthsdk\/([\d.]+)/i.test(ua)? parseFloat(RegExp.$1) : false ;
+    var miuiClient=/passport\/oauthmiui/i.test(ua);
+    var weixinClient=/micromessenger/i.test(ua);
+    var miAccountClient=/passportsdk\/notificationwebview/i.test(ua);
+    var miuiYellowPageClient=/miuiyellowpage/i.test(ua);
+    if(authSDK || miuiClient || weixinClient || miAccountClient || miuiYellowPageClient){
+      result={
+        authSDK:authSDK,
+        miuiClient:miuiClient,
+        weixinClient:weixinClient,
+        miAccountClient:miAccountClient,
+        miuiYellowPageClient:miuiYellowPageClient
+      }
+    }
+    return result;
+  }
+  
+  var webviewDisabled= "";
+  var popContainer= '<div style="display:block;" class="popup_mask fixed pchide">'+
+                      '<div class="bkc"></div>'+
+                      '<div class="mod_wrap">'+
+                        '<div style="display:block;" class="mod_acc_tip">'+
+                          '<div class="wap_frame">'+
+                            '<div class="icon_around"></div>'+
+                            '<div class="around_txt">'+
+                              '<h4>'+webviewDisableTip+'</h4><p>'+webviewDisableTip2+
+                              '</p><p class="pt20 t_c copy-link">'+location.href+'</p>'+
+                            '</div>'+
+                            '<a class="btn_tip btn_back wap_btn_abs btn-action-go" href="javascript:void(0)">'+webviewDisableBtn+'</a>'+
+                          '</div>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>';
+  if(isWebview()){
+    $(".n-footer").hide();
+    $(".n-logo-area").hide();
+    $(".logout_wap").hide();
+  }
+  
+  if(webviewDisabled==='true'){
+    $('body').append(popContainer);
+  }
+  if(!isWebview() && closeStatus==='true'){
+    $('.btn-action-go').show();
+  }
+  $('.btn-action-go').bind('click',function(){
+    $(this).closest('.popup_mask').hide();
+    return false;
+  });
+</script>
+
+
+<!-- 编辑个人信息资料 s -->
+<div class="popup_mask">
+<div class="bkc"></div>
+<div class="mod_wrap">
+<div class="mod_acc_tip layereditinfo">
+  <div class="mod_tip_hd">
+    <h4>编辑基础资料</h4>
+    <a class="btn_mod_close" href="" title=""><span>关闭</span></a>
+  </div>
+  <div class="mod_tip_bd">
+    <form action="" method="">      
+    <div class="wapbox editbasicinfo">
+      <dl class="infobox c_b">
+        <dt>姓名：</dt>
+        <dd>
+          <label class="labelbox"><input class="nickname" type="text" name="nickname" maxlength="20" placeholder="姓名"></label>
+        </dd>      
+        <dt>生日：</dt>
+        <dd>
+          <ul class="birth-box c_b">
+            <li class="biry">
+              <div>
+                <span class="titsbirth c_b">
+                  <em class="birthcon">年</em>
+                  <i class="icon_cirarr"></i>
+                </span>
+              </div>
+              <div class="tits_list select-year">
+                <div class="cancel_panel">
+                  <div class="cancel_box">
+                    <a class="btnadpt bg_white btn-cancel" href="javascript:void(0);">取消</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="month_day birm">              
+              <div>
+                <span class="titsbirth c_b">
+                  <em class="birthcon">月</em>
+                  <i class="icon_cirarr"></i>
+                </span>                  
+              </div>
+              <div class="tits_list select-month">
+                <div class="select_panel">
+                  <p value="01">01</p>
+                  <p value="02">02</p>
+                  <p value="03">03</p>
+                  <p value="04">04</p>
+                  <p value="05">05</p>
+                  <p value="06">06</p>
+                  <p value="07">07</p>
+                  <p value="08">08</p>
+                  <p value="09">09</p>
+                  <p value="10">10</p>
+                  <p value="11">11</p>
+                  <p value="12">12</p>
+                </div>
+                <div class="cancel_panel">
+                  <div class="cancel_box">
+                    <a class="btnadpt bg_white btn-cancel" href="javascript:void(0);">取消</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="month_day bird">                
+              <div>
+                <span class="titsbirth c_b">
+                  <em class="birthcon">日</em>
+                  <i class="icon_cirarr"></i>
+                </span>                 
+              </div>
+              <div class="tits_list bird select-date">
+                <div class="select_panel">
+                  <p value="01">01</p>
+                  <p value="02">02</p>
+                  <p value="03">03</p>
+                  <p value="04">04</p>
+                  <p value="05">05</p>
+                  <p value="06">06</p>
+                  <p value="07">07</p>
+                  <p value="08">08</p>
+                  <p value="09">09</p>
+                  <p value="10">10</p>
+                  <p value="11">11</p>
+                  <p value="12">12</p>
+                  <p value="13">13</p>
+                  <p value="14">14</p>
+                  <p value="15">15</p>
+                  <p value="16">16</p>
+                  <p value="17">17</p>
+                  <p value="18">18</p>
+                  <p value="19">19</p>
+                  <p value="20">20</p>
+                  <p value="21">21</p>
+                  <p value="22">22</p>
+                  <p value="23">23</p>
+                  <p value="24">24</p>
+                  <p value="25">25</p>
+                  <p value="26">26</p>
+                  <p value="27">27</p>
+                  <p value="28">28</p>
+                  <p value="29">29</p>
+                  <p value="30">30</p>
+                  <p value="31">31</p>
+                </div>
+                <div class="cancel_panel">
+                  <div class="cancel_box">
+                    <a class="btnadpt bg_white btn-cancel" href="javascript:void(0);">取消</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>         
+        </dd>        
+        <dt>性别：</dt>
+        <dd class="checkbox infosex">
+          <span value="m"><i class="icon_select iconinfosex"></i><em>男</em></span>
+          <span value="f"><i class="icon_select iconinfosex"></i><em>女</em></span>
+        </dd>
+      </dl>
+      <div class="err_tip empty_name err_tip_independ" style="display:none;">名字不能为空</div> 
+	  <div class="err_tip sys_err err_tip_independ" style="display:none;">系统错误，请稍候再试</div> 
+	  <div class="err_tip empty_param err_tip_independ" style="display:none;">参数为空</div> 
+	  <div class="err_tip bad_param err_tip_independ" style="display:none;">参数错误</div> 
+	  <div class="err_tip bad_nickname err_tip_independ" style="display:none;">名字长度不合法，应为2-20个字符</div>
+	  <div class="err_tip bad_birthday err_tip_independ error-birth" style="display:none;">生日格式不合法</div>
+	  <div class="err_tip bad_gender err_tip_independ" style="display:none;">性别参数不合法</div>
+    <div class="err_tip empty_birthday err_tip_independ error-birth" style="display:none;">请完整选择生日信息</div>
+    <div class="err_tip invalid_birthday err_tip_independ error-birth" style="display:none;">请提供您的真实信息</div>
+    </div>      
+    <div class="tip_btns">
+      <a class="btn_tip btn_commom" href="" title="保存">保存</a>
+      <!-- <input class="btn_tip btn_commom" type="submit" value="保存"> -->
+      <a class="btn_tip btn_back" href="" title="取消">取消</a>
+    </div>
+    </form> 
+  </div>  
+</div>
+</div>
+</div>
+<!-- 编辑个人信息资料 e -->
+<!-- 设置头像 s -->
+<div class="popup_mask">
+<div class="bkc"></div>
+<div class="mod_wrap">
+<div class="mod_acc_tip layeruploadface">
+  <div class="mod_tip_hd">
+    <h4>
+		  
+			  设置头像
+			
+	</h4>
+    <a class="btn_mod_close" href="" title=""><span>关闭</span></a>
+  </div>
+  <div class="mod_tip_bd preupload">
+	<iframe style="display:none;" width="0" height="0" name="uploadPhoto" id="uploadPhoto"></iframe>
+	<!--
+    <form action="/user/profile/requestUpload" method="POST">   
+		<input type="hidden" name="userId" value="1135754503">
+		<input type="hidden" name="quality" value="1.0">
+		<input type="hidden" name="isRedirect" value="true">
+		<input type="hidden" name="passport_ph" value="">
+		<input type="hidden" name="passToken" value="">
+	</form> 
+	-->
+	<form action="/pass/auth/profile/requestUpload" method="POST" enctype="multipart/form-data" target="uploadPhoto" id="photoUploader">   
+    <div class="wapbox accset">
+      <dl>
+        <dt><strong class="wap_title_big">请上传图片：</strong></dt>
+        <dd>
+          <div class="uplode_img">
+		  <!--
+            <a class="btn_tip btn_commom" href="" title="上传头像">上传头像</a>
+			-->
+			<input type="button" onclick="return false;" class="btn_tip btn_commom" value="上传头像">
+            <input class="uplodefile" name="userfile" type="file" autocomplete="off" disableautocomplete >
+          </div>
+          <p>jpg 或 png，大小不超过2M</p>
+        </dd>              
+      </dl>
+      <div class="err_tip wng_fmt err_tip_independ" style="display:none;">图片格式不符合要求！</div>       
+	  <div class="err_tip sys_err err_tip_independ" style="display:none;">系统错误，请稍候再试</div> 
+	  <div class="err_tip file_too_large err_tip_independ" style="display:none;">文件太大，上传失败</div> 
+    </div>      
+    <div class="tip_btns">      
+      <!-- <input class="btn_tip btn_commom" type="submit" value="保存"> -->
+      <a class="btn_tip btn_back" href="" title="取消">取消</a>
+    </div>
+    </form> 
+  </div>  
+  <div class="mod_tip_bd uploading" style="display:none;">  
+	<div class="wapbox">
+    <div class="mar30 t_c">
+      <!-- loading图片 -->
+      <img width="88" height="88" src="https://account.xiaomi.com/static/res/156418c/passport/acc-2014/img/loading.gif" alt="">
+      <div class="naccprocess">
+        <p class="ft20" style="display:none;"><span></span>%</p>
+        <p>上传中</p>
+      </div>
+    </div>      
+    <div class="err_tip wng_fmt err_tip_independ" style="display:none; margin-left:100px;">图片格式不符合要求！</div>       
+	<div class="err_tip file_too_large err_tip_independ" style="display:none; margin-left:100px;">文件太大，上传失败</div> 
+	<div class="err_tip sys_err uploaderror err_tip_independ" style="display:none;">系统错误，请稍候再试</div>
+	  <div class="err_tip missing_param err_tip_independ" style="display:none; margin-left:100px;">缺少参数</div>
+	  <div class="err_tip missing_file err_tip_independ" style="display:none; margin-left:100px;">找不到指定文件</div>
+	  <div class="err_tip unsupported_mime_type err_tip_independ" style="display:none; margin-left:100px;">不支持的MIME TYPE</div>
+	</div>
+    <div class="tip_btns">      
+      <!-- <input class="btn_tip btn_commom" type="submit" value="保存"> -->
+      <a id="abortUpload" class="btn_tip btn_back" href="" title="取消">取消</a>
+    </div>
+  </div>
+
+  <div class="mod_tip_bd uploaded">
+	<div class="wapbox">
+		<div class="clipimg t_c">
+			<!-- 图片放置位置       -->
+			<div class="uploadimgs">
+			  <img alt="">
+			  <!--
+			  <div class="clip"></div>
+			  -->
+			</div>
+			<div style="" class="movebox">
+				<i class="icon_square icon_square_rightbot"></i>
+			</div> 	
+		</div>
+		<div class="cliperror">
+			<div class="err_tip sys_err err_tip_independ" style="display:none;">系统错误，请稍候再试</div> 
+			<div class="err_tip bad_param err_tip_independ" style="display:none;">参数错误</div> 
+			<div class="err_tip upload_failed err_tip_independ" style="display:none;">上传失败</div> 
+		</div>
+	</div>
+    <div class="tip_btns">      
+      <input class="btn_tip btn_commom" type="submit" value="确定">
+      <a class="btn_tip btn_back" href="" title="重新上传" id="reuploadPhoto">重新上传</a>
+    </div>
+  </div>  
+</div>
+</div>
+</div>
+<div id="l11n-node" style="display:none;"
+	_l11n-jsp_2014_select="请选择" 
+  _l11n-jsp_birthday_date="日"
+  _l11n-jsp_birthday_month="月"
+  _l11n-jsp_birthday_year="年"
+></div>
+<!-- 设置头像 e -->
+<!-- 切换帐号地区 s -->
+<div class="popup_mask">
+<div class="bkc"></div>
+<div class="mod_wrap">
+
+<div class="mod_acc_tip" id="popSwitchRegion">
+  <div class="mod_tip_hd">
+    <h4>切换帐号地区</h4>
+    <a class="btn_mod_close" href="" title=""><span>关闭</span></a>
+  </div>
+  <div class="mod_tip_bd">        
+    <div class="wapbox n_txtbox">
+      <p>请注意：</p>
+      <ul>
+        <li class="disc">不同地区的米币不通用，切换后可能导致您的米币余额无法使用。</li>
+        <li class="disc">一些会员服务，只在部分地区提供，切换后可能无法继续使用。</li>
+        <li class="disc">一些版权内容，只在部分地区提供，切换后可能无法观看。</li>
+      </ul>
+    </div>    
+    <div class="tip_btns">      
+      <input id="continueSwitch" class="btn_tip btn_commom" type="submit" value="继续切换">
+      <a class="btn_tip btn_back" href="" title="取消">取消</a>
+    </div>
+  </div>  
+  <div class="mod_tip_bd" style="display:none;">
+    <div class="wapbox wap_pt30 regbox">
+      <div class="listwrap change_region_box">        
+          <div class="listtit">
+            <span class="tits dis_box c_b">
+              <tt _code="">请选择</tt>
+              <i class="icon_cirarr"></i>
+            </span>
+          </div>  
+			  <div class="country-container" style="display: none;">
+			   <div class="country-code select_panel">
+				<div class="container">
+				 <div class="header">
+				  热门
+				 </div>
+				 <ul class="list">
+				  <li class="record clearfix"><span class="record-country" _brief="CN">中国</span></li>
+				  <li class="record clearfix"><span class="record-country" _brief="TW">中国台湾</span></li>
+				  <li class="record clearfix"><span class="record-country" _brief="HK">中国香港</span></li>
+				  <li class="record clearfix"><span class="record-country" _brief="BR">Brazil</span></li>
+				  <li class="record clearfix"><span class="record-country" _brief="IN">India</span></li>
+				  <li class="record clearfix"><span class="record-country" _brief="ID">Indonesia</span></li>
+				  <li class="record clearfix"><span class="record-country" _brief="MY">Malaysia</span></li>
+				 </ul>
+				</div>
+
+					<div class="container">
+					  <div class="header">A</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="AF">Afghanistan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AX">Åland Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AL">Albania</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="DZ">Algeria</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AS">American Samoa</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AD">Andorra</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AO">Angola</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AI">Anguilla</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AQ">Antarctica</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AG">Antigua and Barbuda</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AR">Argentina</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AM">Armenia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AW">Aruba</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AU">Australia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AT">Austria</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AZ">Azerbaijan</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">B</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="BS">Bahamas</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BH">Bahrain</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BD">Bangladesh</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BB">Barbados</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BY">Belarus</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BE">Belgium</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BZ">Belize</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BJ">Benin</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BM">Bermuda</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BT">Bhutan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BO">Bolivia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BQ">Bonaire, Sint Eustatius and Saba</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BA">Bosnia and Herzegovina</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BW">Botswana</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BV">Bouvet Island</span></li>
+						
+						<li class="record clearfix"><span class="record-country" _brief="IO">British Indian Ocean Territory</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="VG">British Virgin Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BN">Brunei</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BG">Bulgaria</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BF">Burkina Faso</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="BI">Burundi</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">C</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="KH">Cambodia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CM">Cameroon</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CA">Canada</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CV">Cape Verde</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KY">Cayman Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CF">Central African Republic</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TD">Chad</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CL">Chile</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CX">Christmas Island</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CC">Cocos Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CO">Colombia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KM">Comoros</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CG">Congo</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CK">Cook Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CR">Costa Rica</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="HR">Croatia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CU">Cuba</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CW">Curaçao</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CY">Cyprus</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CZ">Czech Republic</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CI">Côte d'Ivoire</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">D</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="DK">Denmark</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="DJ">Djibouti</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="DM">Dominica</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="DO">Dominican Republic</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">E</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="EC">Ecuador</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="EG">Egypt</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SV">El Salvador</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GQ">Equatorial Guinea</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ER">Eritrea</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="EE">Estonia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ET">Ethiopia</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">F</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="FK">Falkland Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="FO">Faroe Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="FJ">Fiji</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="FI">Finland</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="FR">France</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GF">French Guiana</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PF">French Polynesia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TF">French Southern Territories</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">G</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="GA">Gabon</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GM">Gambia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GE">Georgia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="DE">Germany</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GH">Ghana</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GI">Gibraltar</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GR">Greece</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GL">Greenland</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GD">Grenada</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GP">Guadeloupe</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GU">Guam</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GT">Guatemala</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GG">Guernsey</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GN">Guinea</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GW">Guinea-Bissau</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GY">Guyana</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">H</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="HT">Haiti</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="HM">Heard Island And McDonald Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="HN">Honduras</span></li>
+
+						<li class="record clearfix"><span class="record-country" _brief="HU">Hungary</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">I</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="IS">Iceland</span></li>
+						
+						
+						<li class="record clearfix"><span class="record-country" _brief="IR">Iran</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="IQ">Iraq</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="IE">Ireland</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="IM">Isle Of Man</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="IL">Israel</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="IT">Italy</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">J</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="JM">Jamaica</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="JP">Japan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="JE">Jersey</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="JO">Jordan</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">K</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="KZ">Kazakhstan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KE">Kenya</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KI">Kiribati</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KW">Kuwait</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KG">Kyrgyzstan</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">L</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="LA">Laos</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LV">Latvia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LB">Lebanon</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LS">Lesotho</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LR">Liberia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LY">Libya</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LI">Liechtenstein</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LT">Lithuania</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LU">Luxembourg</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">M</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="MO">Macao</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MK">Macedonia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MG">Madagascar</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MW">Malawi</span></li>
+						
+						<li class="record clearfix"><span class="record-country" _brief="MV">Maldives</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ML">Mali</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MT">Malta</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MH">Marshall Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MQ">Martinique</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MR">Mauritania</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MU">Mauritius</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="YT">Mayotte</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MX">Mexico</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="FM">Micronesia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MD">Moldova</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MC">Monaco</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MN">Mongolia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ME">Montenegro</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MS">Montserrat</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MA">Morocco</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MZ">Mozambique</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MM">Myanmar</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">N</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="NA">Namibia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NR">Nauru</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NP">Nepal</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NL">Netherlands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AN">Netherlands Antilles</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NC">New Caledonia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NZ">New Zealand</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NI">Nicaragua</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NE">Niger</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NG">Nigeria</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NU">Niue</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NF">Norfolk Island</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KP">North Korea</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MP">Northern Mariana Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="NO">Norway</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">O</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="OM">Oman</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">P</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="PK">Pakistan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PW">Palau</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PS">Palestine</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PA">Panama</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PG">Papua New Guinea</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PY">Paraguay</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PE">Peru</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PH">Philippines</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PN">Pitcairn</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PL">Poland</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PT">Portugal</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PR">Puerto Rico</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">Q</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="QA">Qatar</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">R</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="RE">Reunion</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="RO">Romania</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="RU">Russia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="RW">Rwanda</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">S</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="BL">Saint Barthélemy</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SH">Saint Helena</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KN">Saint Kitts And Nevis</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LC">Saint Lucia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="MF">Saint Martin</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="PM">Saint Pierre And Miquelon</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="VC">Saint Vincent And The Grenadines</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="WS">Samoa</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SM">San Marino</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ST">Sao Tome And Principe</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SA">Saudi Arabia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SN">Senegal</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="RS">Serbia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CS">Serbia and Montenegro</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SC">Seychelles</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SL">Sierra Leone</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SG">Singapore</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SX">Sint Maarten (Dutch part)</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SK">Slovakia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SI">Slovenia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SB">Solomon Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SO">Somalia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ZA">South Africa</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GS">South Georgia And The South Sandwich Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="KR">South Korea</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ES">Spain</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="LK">Sri Lanka</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SD">Sudan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SR">Suriname</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SJ">Svalbard And Jan Mayen</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SZ">Swaziland</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SE">Sweden</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CH">Switzerland</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="SY">Syria</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">T</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="TJ">Tajikistan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TZ">Tanzania</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TH">Thailand</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="CD">The Democratic Republic Of Congo</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TL">Timor-Leste</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TG">Togo</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TK">Tokelau</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TO">Tonga</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TT">Trinidad and Tobago</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TN">Tunisia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TR">Turkey</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TM">Turkmenistan</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TC">Turks And Caicos Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="TV">Tuvalu</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">U</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="VI">U.S. Virgin Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="UG">Uganda</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="UA">Ukraine</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="AE">United Arab Emirates</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="GB">United Kingdom</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="US">United States</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="UM">United States Minor Outlying Islands</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="UY">Uruguay</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="UZ">Uzbekistan</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">V</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="VU">Vanuatu</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="VA">Vatican</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="VE">Venezuela</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="VN">Vietnam</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">W</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="WF">Wallis And Futuna</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="EH">Western Sahara</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">Y</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="YE">Yemen</span></li>
+						</ul>
+					</div>
+					<div class="container">
+					  <div class="header">Z</div>
+					  <ul class="list">
+						<li class="record clearfix"><span class="record-country" _brief="ZM">Zambia</span></li>
+						<li class="record clearfix"><span class="record-country" _brief="ZW">Zimbabwe</span></li>
+						</ul>
+					</div>
+				
+			   </div>
+          <div class="cancel_panel">
+            <div class="cancel_box">
+              <a class="btnadpt bg_white btn-cancel" href="javascript:void(0);">取消</a>
+            </div>
+          </div>
+			  </div>
+        </div> 
+		<div id="region_errors">
+			<div class="err_tip sys_err err_tip_independ" style="display:none">系统错误，请稍候再试</div>
+			<div class="err_tip bad_param err_tip_independ" style="display:none;">参数错误</div> 
+			<div class="err_tip empty_region err_tip_independ" style="display:none;">帐号地区不能为空</div> 
+		</div>
+    </div>   
+    <div class="tip_btns">      
+      <input class="btn_tip btn_commom" type="submit" id="doRegionSwitch" value="确定">
+      <a class="btn_tip btn_back" href="" title="取消">取消</a>
+    </div>
+  </div>  
+</div>
+
+</div>
+</div>
+<!-- 切换帐号地区 e -->
+<script src="https://account.xiaomi.com/static/res/6941994/passport/scripts/jquery-1.8.3.min.js"></script>
+<script src="https://account.xiaomi.com/static/res/bde1db5/passport/scripts/oo/oo-min.js"></script>
+<script src="https://account.xiaomi.com/static/res/836f8ab/scripts/respassport/scripts/oo/com/mi/utils/l11n.js"></script>
+<script src="https://account.xiaomi.com/static/res/d833ee3/passport/scripts/oo/com/mi/utils/cookie.js"></script>
+<script src="https://account.xiaomi.com/static/res/cea14d9/passport/scripts/oo/com/mi/utils/url.js"></script>
+<script>
+  var JSP_VAR={
+    deviceType:'PC'
+  };
+</script>
+<script 
+  src="/static/res/9596548/account-static/respassport/scripts/oo/com/mi/passport/portal/main/2014.js">
+</script>
+
+<script>
+OO(['com.mi.passport.portal.2014'],function(portal2014,O){
+	var Profile = portal2014.Profile;
+	var profile = new Profile({
+			
+		});
+	profile.render();
+});
+</script>
+<script>
+$('#loadingMask').hidePopup();
+</script>
+<style type="text/css">
+/*干掉该死的IE6的遮罩问题*/
+#loadingMask .bkc{
+	_height:200%;
+}
+</style>
+<div id="img_cache" style="visibility:hidden;"></div>
+</body>
+</html>

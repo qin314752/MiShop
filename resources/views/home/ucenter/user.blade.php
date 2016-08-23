@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" async="" src="/address/js/jquery.2.1.1.min.js"></script>
     <script type="text/javascript" async="" src="/address/js/bootstrap.js"></script>
+   
 
 
 <title>小米帐号 - 个人信息</title>
@@ -87,10 +90,13 @@
         <div class="main_r">
           <div class="framedatabox">
             <div class="fdata">
+              <!-- <a  id="bianjie" href="#" title="编辑" >编辑</a> -->
+                <div class="color4a9 fr" " target="_blank" id="switchRegion">修改</div>
+
               <h3>个人信息</h3>    
             </div>
             <div class="fdata lblnickname">
-              <p><span>姓名：</span><span id="update">
+              <p><span>姓名：</span><span >
 			  
 				{{$user->username}}
 				
@@ -98,14 +104,14 @@
             </div>
             
             <div class="fdata lblgender">
-              <p><span>性别：</span><span id="sex">
+              <p><span>性别：</span><span>
 			  
 					{{$user->sex}}
 				
 			  </span></p>     
             </div>
 			<div class="fdata lblbirthday">
-              <p><span>手机：</span><span id="tel">
+              <p><span>手机：</span><span >
               
                     {{$user->tel}}
                 
@@ -114,14 +120,7 @@
           </div>
 			  <div class="framedatabox">
 				
-				          
-				<div class="fdata click-row">
-				  
-				  <p>
-					  <span>帐号地区：  </span>
-					  <span class="box_center"><em id="region" _code="CN">{{$user->guojia}}</em><i class="arrow_r"></i></span>
-				  </p>     
-				</div>
+			
 			  </div>
 		<div class="logout_wap">
 			<a class="btnadpt bg_white  del" href="#">退出</a>
@@ -145,137 +144,61 @@
   </div>
   <p class="nf-intro"><span>小米公司版权所有-京ICP备10046444-<i href="#" class="beianlink beian-record-link" target="_blank"><span><img src="/personal/ghs.png"></span>京公网安备11010802020134号</i>-京ICP证110507号</span></p>
 </div>
+
 <script type="text/javascript">
       //绑定双击事件 进行修改
-$('#update').dblclick(function(){
+$('#switchRegion').click(function(){
+    
+    $('.aa').css('display','block');
 
-
-    if($(this).attr('isDbl') == 1){return}
-    //添加标识
-    $(this).attr('isDbl',1);
-    //获取原来的用户名
-    var yname = $(this).html();
-    var id = $(this).prev().html();
-    var td = $(this);
-    //创建input
-    var inp = $('<input type="text" value="'+yname+'" />');
-    $(this).empty();
-    //插入
-    $(this).append(inp);
-    // 双击自动全选文档
-    inp.select();
-    //绑定丧失焦点事件
-    inp.blur(function(){
-      var name = $(this).val();
-      if(name==''){
-        name = yname;
-        die;
-      }
-      //发送ajax
-      $.get("{{url('/ucenter/update/')}}",{username:name},function(data){
-        console.log(data);
-        // 判断返回
-        if(data == 1){       
-          td.empty();
-          td.html(name);
-          td.removeAttr('isDbl');
-        }else{
-          //修改失败
-          td.empty();
-          td.html(yname);
-          td.removeAttr('isDbl');
-
-        }
-      });
-    });
-  });
-      //绑定双击事件 进行修改
-$('#tel').dblclick(function(){
-
-
-    if($(this).attr('isDbl') == 1){return}
-    //添加标识
-    $(this).attr('isDbl',1);
-    //获取原来的用户名
-    var yname = $(this).html();
-    var id = $(this).prev().html();
-    var td = $(this);
-    //创建input
-    var inp = $('<input type="text" value="'+yname+'" />');
-    $(this).empty();
-    //插入
-    $(this).append(inp);
-    // 双击自动全选文档
-    inp.select();
-    //绑定丧失焦点事件
-    inp.blur(function(){
-      var name = $(this).val();
-      if(name==''){
-        name = yname;
-        die;
-      }
-      //发送ajax
-      $.get("{{url('/ucenter/tel/')}}",{tel:name},function(data){
-        console.log(data);
-        // 判断返回
-        if(data == 1){       
-          td.empty();
-          td.html(name);
-          td.removeAttr('isDbl');
-        }else{
-          //修改失败
-          td.empty();
-          td.html(yname);
-          td.removeAttr('isDbl');
-
-        }
-      });
-    });
-  });      //绑定双击事件 进行修改
-$('#sex').dblclick(function(){
-
-
-    if($(this).attr('isDbl') == 1){return}
-    //添加标识
-    $(this).attr('isDbl',1);
-    //获取原来的用户名
-    var yname = $(this).html();
-    var id = $(this).prev().html();
-    var td = $(this);
-    //创建input
-    var inp = $('<input type="text" value="'+yname+'" />');
-    $(this).empty();
-    //插入
-    $(this).append(inp);
-    // 双击自动全选文档
-    inp.select();
-    //绑定丧失焦点事件
-    inp.blur(function(){
-      var name = $(this).val();
-      if(name==''){
-        name = yname;
-        die;
-      }
-      //发送ajax
-      $.get("{{url('/ucenter/sex/')}}",{sex:name},function(data){
-        console.log(data);
-        // 判断返回
-        if(data == 1){       
-          td.empty();
-          td.html(name);
-          td.removeAttr('isDbl');
-        }else{
-          //修改失败
-          td.empty();
-          td.html(yname);
-          td.removeAttr('isDbl');
-
-        }
-      });
-    });
-  });
-
+});
 
 </script>
+
+
+<!-- 编辑个人信息资料 s -->
+<div  style="display: none;" class="popup_mask aa">
+<div class="bkc"></div>
+<div class="mod_wrap">
+<div style="display: none;" class="mod_acc_tip layereditinfo aa">
+  <div class="mod_tip_hd">
+    <h4>编辑基础资料</h4>
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <!-- <a class="btn_mod_close " href="#" title=""><span>关闭</span></a> -->
+  </div>
+  <div class="mod_tip_bd">
+    <form action="{{url('ucenter/update')}}" method="post">      
+    <div class="wapbox editbasicinfo">
+      <dl class="infobox c_b">
+        <dt>姓名: </dt>
+        <dd>
+          <label class="labelbox"><input class="nickname" name="username" maxlength="20" placeholder="姓名" type="text"></label>
+        </dd>      
+              
+        <dt>性别: </dt>
+        <dd class="checkbox infosex">
+          <label class="labelbox">
+        <input type="radio" style="width:20px;height:20px;border:1px solid #ccc" name="sex" value="2">&nbsp;&nbsp;&nbsp;<span style="font-size:15px">男&nbsp;&nbsp;<span>
+        <input type="radio" style="width:20px;height:20px;border:1px solid #ccc" name="sex" value="1">&nbsp;&nbsp;&nbsp;<span style="font-size:15px">女<span></label>
+        
+        </dd>
+
+         <dt>手机: </dt>
+        <dd>
+          <label class="labelbox"><input class="nickname" name="tel" maxlength="20" placeholder="手机号码" type="text"></label>
+                 
+        </dd> 
+      </dl>
+     {{csrf_field()}}
+    </div>      
+    <div class="tip_btns">
+      <button class="btn_tip btn_commom" href="#" title="保存">保存</button>
+      <button class="btn_tip btn_back" href="#" title="取消">取消</button>
+    </div>
+    </form> 
+  </div>  
+</div>
+</div>
+</div>
 </body>
 </html>

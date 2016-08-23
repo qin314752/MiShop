@@ -155,6 +155,33 @@
   </table>
 </body>
 
+     
+
+      <script type="text/javascript">
+          
+    var ti = document.getElementById('ti');
+    var i = 3;
+    aa()
+    var a = setInterval(aa,1000);
+    function aa()
+    {
+      ti.innerHTML =i;
+      i--;
+
+      if (i == -1) {clearInterval(a)
+
+      }
+      if(i==-1){
+        window.location.href='http://www.lampmaster.com';
+        
+    }
+  
+
+
+        
+      }
+      </script>
+
 
 
 

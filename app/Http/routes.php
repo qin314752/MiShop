@@ -41,3 +41,4 @@ Route::Controller('/admin/flink','admin\FlinkController');//友情链接
 Route::Controller('/admin/goods_cate','admin\Goods_cateController');//商品分类
 Route::Controller('/admin/order','admin\OrderController');//后台订单
 Route::Controller('/admin/config','admin\ConfigController');//网站配置
+Route::Controller('/admin/login','admin\LoginController');//网站配置

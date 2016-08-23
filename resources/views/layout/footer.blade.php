@@ -90,7 +90,19 @@
     <div class="container">
         <div class="logo ir">小米官网</div>
         <div class="info-text">
-            <p class="sites"><a rel="nofollow" href="//www.lampmaster.com/index.html"   target="_blank">小米商城</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">MIUI</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">米聊</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">多看书城</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">小米路由器</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">视频电话</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">小米后院</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">小米天猫店</a><span class="sep">|</span><a rel="nofollow" href="http://shop115048570.taobao.com"   target="_blank">小米淘宝直营店</a><span class="sep">|</span><a rel="nofollow" href="http://www.lampmaster.com/"   target="_blank">小米网盟</a><span class="sep">|</span><a rel="nofollow" href="//www.lampmaster.com/feedback/"   target="_blank">问题反馈</a><span class="sep">|</span><a rel="nofollow" href="#J_modal-globalSites" data-toggle="modal" >Select Region</a>            </p>
+
+
+
+<p class="sites">
+@foreach($flink as $k=>$v)
+  <a rel="nofollow" href="{{$v->url}}" target="_blank">{{$v->name}}</a>
+  <span class="sep">|</span>
+@endforeach
+  </p>
+
+
+
+
             <p>&copy;<a href="//www.lampmaster.com/" target="_blank" title="mi.com">mi.com</a> 京ICP证110507号 京ICP备10046444号 <a rel="nofollow"  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134" target="_blank">京公网安备11010802020134号 </a><a rel="nofollow"  href="//www.lampmaster.com/f/i/2013/cn/jingwangwen.jpg" target="_blank" rel="nofollow">京网文[2014]0059-0009号</a>
 
 <br> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>

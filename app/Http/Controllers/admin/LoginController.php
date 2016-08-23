@@ -12,11 +12,11 @@ class LoginController extends Controller
 	//后台登录
 	public function getIndex()
 	{
-			return view('admin/login/login
-				');
+	
+			return view('/admin/login/login');
 	}
 
-	public  function postDologin(Request $request)
+	public  function postAdd(Request $request)
 	{
 		$arr = $request->except('_token');
 		// dd($arr);
@@ -28,18 +28,47 @@ class LoginController extends Controller
 
 		if(Hash::check($request->input('password'), $user->password)) {
 
-			session(['id'=>$user->id]);
+			if($user->qx == 3){
+				session(['id'=>$user->id]);
 				return redirect('admin/user/')->with('success','欢迎'.$user->username.'登陆');
+			
+			
+			}else{
+				return back()->with('error','权限不够');
+			
 
+			}
+			
+			
 		}else{
+		
 				return back()->with('error','用户名或密码错误');
 
 			}
-
+		
 		}else{
+		
 			return back()->with('error','用户名或密码错误');
 		}
 	}
+
+	public function getDel(){
+		session(['id'=>'']);
+		return view('admin/login/login');
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

@@ -172,7 +172,7 @@ class LoginController extends Controller
 	            //执行数据插入
 	            $strr = DB::table('ms_user') ->where('id', $arr['id']) ->update(['token' =>$arr['token'], 'status' =>$arr['status']]);
 	            session(['user'=>$str]);
-	            return redirect(url('home/login/success'));
+	            return redirect(url('home/login/success1'));
 	        } else {
 
 	            return redirect(url('home/login/error'));
@@ -190,7 +190,7 @@ class LoginController extends Controller
 	    return view('home/email/success');
 
 	}
-	//邮件激活
+	//密码找回邮件激活
 
 	public function getSuccess2() {
 	    return view('home/email/success2');
@@ -202,7 +202,10 @@ class LoginController extends Controller
 	    return view('home/email/error');
 
 	}
+	public function getSuccess1() {
+	    return view('home/email/success1');
 
+	}
 
 	
 

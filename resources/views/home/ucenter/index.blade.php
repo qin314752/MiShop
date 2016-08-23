@@ -19,7 +19,7 @@
                                 <li>
                                     <a href="{{url('/order/show')}}">我的订单</a></li>
                                 <li>
-                                    <a href="http://order.mi.com/user/comment?filter=1&amp;r=39157.1471244075" data-count="comment" data-count-style="bracket" data-stat-id="20db2c68bfa9e4a5" onclick="">评价晒单</a></li>
+                                    <a href="#">评价晒单</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                     <h2 class="username">{{$user->username}}</h2>
                                  <br>
                                     <a target="_blank" href="{{url('/ucenter/sele/')}}">修改个人信息 &gt;</a>
-                                    <img width="150" height="150" alt="1135754503" src="{{$user->pic}}" class="avatar">
+                                    <img width="150" height="150" src="{{$user->pic}}" class="avatar">
                                 </div>
                                 <div class="user-actions">
                                     <ul class="action-list">

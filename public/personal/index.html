@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>小米帐号 - 个人信息</title>
+
+
+		
+
+
+		
+
+		
+	
+
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body style="overflow-y: hidden;" class="zh_CN">
+	<div class="popup_mask" style="display: none;" id="loadingMask">
+		<div class="bkc"></div>
+		<div class="mod_wrap loadingmask">
+			
+		</div>
+	</div>
+  <div class="wrapper blockimportant">
+  <div class="wrap">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+
+
+  
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+
+  
+
+<div class="layout bugfix_ie6 dis_none">
+  <div class="n-logo-area clearfix">
+    <a href="https://account.xiaomi.com/" class="fl-l">
+      <img src="n-logo.png" srcset="n-logo.png 1x, n-logo@2x.png 2x">
+    </a>
+    
+      <a id="logoutLink" class="fl-r logout" href="https://account.xiaomi.com/pass/logout?userId=1135754503&amp;callback=https://account.xiaomi.com">
+          退出
+      </a>
+	  <script>
+	  setTimeout(function(){
+		  if(location.hostname === 'account.xiaomi.com'){return;}
+		  var link = document.getElementById('logoutLink');
+		  if(link){
+			  var href = link.getAttribute('href');
+			  var a = document.createElement('a');
+			  a.setAttribute('href','/');
+			  var homeURL = a.href;
+			  href = href.replace(/\&callback\=.*$/, '&callback=' + homeURL);
+			  link.setAttribute('href', href);
+			  a = null;
+		  }
+	  },100);
+	  </script>
+    
+  </div>
+  
+    <!--头像 名字-->
+	<div class="n-account-area-box">
+		<div class="n-account-area clearfix">
+		  <div class="na-info">
+			<p class="na-name" style="color: rgb(153, 153, 153); font-weight: normal;">请设置名字</p>
+			<p class="na-num">1135754503</p>
+		  </div>
+		  <div class="na-img-area fl-l">
+      <!--na-img-bg-area不能插入任何子元素-->
+      <div class="na-img-bg-area"></div>
+		  </div>
+		</div>
+	</div>
+  
+</div>
+
+	<div class="layout">
+      <div class="n-main-nav clearfix">
+        <ul>
+          <li>
+            <a href="https://account.xiaomi.com/pass/auth/security/home" title="帐号安全">帐号安全</a>
+            <em class="n-nav-corner"></em>
+          </li>
+          <li class="current">
+            <a title="个人信息">个人信息</a>
+            <em class="n-nav-corner"></em>
+          </li>
+          <!--<li>
+            <a href="">登录设备</a>
+            <em class="n-nav-corner"></em>
+          </li>-->
+          <li>
+            <a href="https://account.xiaomi.com/pass/auth/sns/home" title="绑定授权">绑定授权</a>
+            <em class="n-nav-corner"></em>
+          </li>
+          <li>
+            <a href="https://account.xiaomi.com/pass/auth/services/home" title="小米服务">小米服务</a>
+            <em class="n-nav-corner"></em>
+          </li>
+        </ul>
+      </div>
+      <div class="n-frame">
+	<div class="uinfo c_b">
+        <div class="">
+        <div class="main_l">
+          <div class="naInfoImgBox t_c">
+            <div class="na-img-area marauto">
+              <!--na-img-bg-area不能插入任何子元素-->
+              <div class="na-img-bg-area"></div>
+              <em class="na-edit"></em>
+            </div>
+            <div class="naImgLink">
+			  
+				  <a class="color4a9" href="#" title="设置头像">设置头像</a>
+				
+            </div>
+          </div>        
+        </div>
+        <div class="main_r">
+          <div class="framedatabox">
+            <div class="fdata">
+              <a class="color4a9 fr" href="#" title="编辑" id="editInfo"><i class="iconpencil"></i>编辑</a>
+              <h3>基础资料</h3>    
+            </div>
+            <div class="fdata lblnickname">
+              <p><span>姓名：</span><span class="value" _empty="">
+			  
+					<span style="color: rgb(153, 153, 153);">请设置名字</span>
+				
+			  </span></p>     
+            </div>
+            <div class="fdata lblbirthday">
+              <p><span>生日：</span><span class="value" _empty="">
+			  
+					
+				
+			  </span></p>     
+            </div>
+            <div class="fdata lblgender">
+              <p><span>性别：</span><span class="value" _empty="">
+			  
+					
+				
+			  </span></p>     
+            </div>
+			<div class="btn_editinfo"><a id="editInfoWap" class="btnadpt bg_normal" href="#">编辑基础资料</a></div>
+          </div>
+			  <div class="framedatabox">
+				<div class="fdata">
+				  <h3>高级设置</h3>    
+				</div>
+				<div class="fdata click-row">
+				  <a class="color4a9 fr" target="_blank" href="https://www.mipay.com/bankcard?_locale=zh_CN" title="管理">管理</a>              
+				  <p>
+					<span>银行卡</span>					
+					<span class="arrow_r"></span>
+				  </p>     
+				</div>            
+				<div class="fdata click-row">
+				  <a class="color4a9 fr" target="_blank" href="#" title="管理" id="switchRegion">修改</a>
+				  <p>
+					  <span>帐号地区：  </span>
+					  <span class="box_center"><em id="region" _code="CN">中国</em><i class="arrow_r"></i></span>
+				  </p>     
+				</div>
+			  </div>
+        </div>
+        </div>
+		<div class="logout_wap">
+			<a class="btnadpt bg_white" href="https://account.xiaomi.com/pass/logout?userId=1135754503&amp;callback=https://account.xiaomi.com">退出</a>
+		</div>
+      </div>
+	 </div>
+	</div>
+  </div>
+  </div>
+	<div class="n-footer">
+  <div class="nf-link-area clearfix">
+  <ul class="lang-select-list">
+    <li><a class="lang-select-li current" href="javascript:void(0)" data-lang="zh_CN">简体</a>|</li>
+    <li><a class="lang-select-li" href="javascript:void(0)" data-lang="zh_TW">繁体</a>|</li>
+    <li><a class="lang-select-li" href="javascript:void(0)" data-lang="en">English</a></li>
+    
+      |<li><a class="a_critical" href="http://static.account.xiaomi.com/html/faq/faqList.html" target="_blank"><em></em>常见问题</a></li>
+    
+  </ul>
+  </div>
+  <p class="nf-intro"><span>小米公司版权所有-京ICP备10046444-<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134" class="beianlink beian-record-link" target="_blank"><span><img src="ghs.png"></span>京公网安备11010802020134号</a>-京ICP证110507号</span></p>
+</div>
+<script src="jquery-1.8.3.min.js"></script>
+<script src="placeholder.js"></script>
+
+
+
+
+<!-- 编辑个人信息资料 s -->
+<div style="display: block;" class="popup_mask">
+<div class="bkc"></div>
+<div class="mod_wrap">
+<div style="display: block;" class="mod_acc_tip layereditinfo">
+  <div class="mod_tip_hd">
+    <h4>编辑基础资料</h4>
+    <a class="btn_mod_close" href="#" title=""><span>关闭</span></a>
+  </div>
+  <div class="mod_tip_bd">
+    <form action="" method="">      
+    <div class="wapbox editbasicinfo">
+      <dl class="infobox c_b">
+        <dt>姓名：</dt>
+        <dd>
+          <label class="labelbox"><input class="nickname" name="nickname" maxlength="20" placeholder="姓名" type="text"></label>
+        </dd>      
+        <dt>生日：</dt>
+        <dd>
+          <ul class="birth-box c_b">
+            <li class="biry">
+              <div>
+                <span class="titsbirth c_b">
+                  <em class="birthcon">年</em>
+                  <i class="icon_cirarr"></i>
+                </span>
+              </div>
+              <div style="display: none;" class="tits_list select-year"><div class="select_panel select-year-panel"><p value="2016">2016</p><p value="2015">2015</p><p value="2014">2014</p><p value="2013">2013</p><p value="2012">2012</p><p value="2011">2011</p><p value="2010">2010</p><p value="2009">2009</p><p value="2008">2008</p><p value="2007">2007</p><p value="2006">2006</p><p value="2005">2005</p><p value="2004">2004</p><p value="2003">2003</p><p value="2002">2002</p><p value="2001">2001</p><p value="2000">2000</p><p value="1999">1999</p><p value="1998">1998</p><p value="1997">1997</p><p value="1996">1996</p><p value="1995">1995</p><p value="1994">1994</p><p value="1993">1993</p><p value="1992">1992</p><p value="1991">1991</p><p value="1990">1990</p><p value="1989">1989</p><p value="1988">1988</p><p value="1987">1987</p><p value="1986">1986</p><p value="1985">1985</p><p value="1984">1984</p><p value="1983">1983</p><p value="1982">1982</p><p value="1981">1981</p><p value="1980">1980</p><p value="1979">1979</p><p value="1978">1978</p><p value="1977">1977</p><p value="1976">1976</p><p value="1975">1975</p><p value="1974">1974</p><p value="1973">1973</p><p value="1972">1972</p><p value="1971">1971</p><p value="1970">1970</p><p value="1969">1969</p><p value="1968">1968</p><p value="1967">1967</p><p value="1966">1966</p><p value="1965">1965</p><p value="1964">1964</p><p value="1963">1963</p><p value="1962">1962</p><p value="1961">1961</p><p value="1960">1960</p><p value="1959">1959</p><p value="1958">1958</p><p value="1957">1957</p><p value="1956">1956</p><p value="1955">1955</p><p value="1954">1954</p><p value="1953">1953</p><p value="1952">1952</p><p value="1951">1951</p><p value="1950">1950</p><p value="1949">1949</p><p value="1948">1948</p><p value="1947">1947</p><p value="1946">1946</p><p value="1945">1945</p><p value="1944">1944</p><p value="1943">1943</p><p value="1942">1942</p><p value="1941">1941</p><p value="1940">1940</p><p value="1939">1939</p><p value="1938">1938</p><p value="1937">1937</p><p value="1936">1936</p><p value="1935">1935</p><p value="1934">1934</p><p value="1933">1933</p><p value="1932">1932</p><p value="1931">1931</p><p value="1930">1930</p><p value="1929">1929</p><p value="1928">1928</p><p value="1927">1927</p><p value="1926">1926</p><p value="1925">1925</p><p value="1924">1924</p><p value="1923">1923</p><p value="1922">1922</p><p value="1921">1921</p><p value="1920">1920</p><p value="1919">1919</p><p value="1918">1918</p><p value="1917">1917</p><p value="1916">1916</p><p value="1915">1915</p><p value="1914">1914</p><p value="1913">1913</p><p value="1912">1912</p><p value="1911">1911</p><p value="1910">1910</p><p value="1909">1909</p><p value="1908">1908</p><p value="1907">1907</p><p value="1906">1906</p><p value="1905">1905</p><p value="1904">1904</p><p value="1903">1903</p><p value="1902">1902</p><p value="1901">1901</p><p value="1900">1900</p></div>
+                <div class="cancel_panel">
+                  <div class="cancel_box">
+                    <a class="btnadpt bg_white btn-cancel" href="javascript:void(0);">取消</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="month_day birm">              
+              <div>
+                <span class="titsbirth c_b">
+                  <em class="birthcon">月</em>
+                  <i class="icon_cirarr"></i>
+                </span>                  
+              </div>
+              <div style="display: none;" class="tits_list select-month">
+                <div class="select_panel">
+                  <p value="01">01</p>
+                  <p value="02">02</p>
+                  <p value="03">03</p>
+                  <p value="04">04</p>
+                  <p value="05">05</p>
+                  <p value="06">06</p>
+                  <p value="07">07</p>
+                  <p value="08">08</p>
+                  <p value="09">09</p>
+                  <p value="10">10</p>
+                  <p value="11">11</p>
+                  <p value="12">12</p>
+                </div>
+                <div class="cancel_panel">
+                  <div class="cancel_box">
+                    <a class="btnadpt bg_white btn-cancel" href="javascript:void(0);">取消</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="month_day bird">                
+              <div>
+                <span class="titsbirth c_b">
+                  <em class="birthcon">日</em>
+                  <i class="icon_cirarr"></i>
+                </span>                 
+              </div>
+              <div style="display: none;" class="tits_list bird select-date">
+                <div class="select_panel">
+                  <p value="01">01</p>
+                  <p value="02">02</p>
+                  <p value="03">03</p>
+                  <p value="04">04</p>
+                  <p value="05">05</p>
+                  <p value="06">06</p>
+                  <p value="07">07</p>
+                  <p value="08">08</p>
+                  <p value="09">09</p>
+                  <p value="10">10</p>
+                  <p value="11">11</p>
+                  <p value="12">12</p>
+                  <p value="13">13</p>
+                  <p value="14">14</p>
+                  <p value="15">15</p>
+                  <p value="16">16</p>
+                  <p value="17">17</p>
+                  <p value="18">18</p>
+                  <p value="19">19</p>
+                  <p value="20">20</p>
+                  <p value="21">21</p>
+                  <p value="22">22</p>
+                  <p value="23">23</p>
+                  <p value="24">24</p>
+                  <p value="25">25</p>
+                  <p value="26">26</p>
+                  <p value="27">27</p>
+                  <p value="28">28</p>
+                  <p value="29">29</p>
+                  <p value="30">30</p>
+                  <p value="31">31</p>
+                </div>
+                <div class="cancel_panel">
+                  <div class="cancel_box">
+                    <a class="btnadpt bg_white btn-cancel" href="javascript:void(0);">取消</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>         
+        </dd>        
+        <dt>性别：</dt>
+        <dd class="checkbox infosex">
+          <span value="m"><i class="icon_select iconinfosex"></i><em>男</em></span>
+          <span value="f"><i class="icon_select iconinfosex"></i><em>女</em></span>
+        </dd>
+      </dl>
+      
+    </div>      
+    <div class="tip_btns">
+      <a class="btn_tip btn_commom" href="#" title="保存">保存</a>
+      <!-- <input class="btn_tip btn_commom" type="submit" value="保存"> -->
+      <a class="btn_tip btn_back" href="#" title="取消">取消</a>
+    </div>
+    </form> 
+  </div>  
+</div>
+</div>
+</div>
+
+<div id="l11n-node" style="display: none;" _l11n-jsp_2014_select="请选择" _l11n-jsp_birthday_date="日" _l11n-jsp_birthday_month="月" _l11n-jsp_birthday_year="年"></div>
+<!-- 设置头像 e -->
+
+<!-- 切换帐号地区 e -->
+<script src="jquery-1.8.3.min.js"></script>
+<script src="oo-min.js"></script>
+<script src="l11n.js"></script>
+<script src="cookie.js"></script>
+<script src="url.js"></script>
+<script src="2014.js"></script>
+
+<script>
+OO(['com.mi.passport.portal.2014'],function(portal2014,O){
+	var Profile = portal2014.Profile;
+	var profile = new Profile({
+			
+		});
+	profile.render();
+});
+</script>
+<script>
+$('#loadingMask').hidePopup();
+</script>
+
+</body>
+</html>

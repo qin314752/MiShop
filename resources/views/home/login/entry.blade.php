@@ -52,7 +52,7 @@
 
      <div class="inputbg">
       <label class="labelbox" for="">
-        <input type="text" name="password" data-type="PH" placeholder="请输入密码">
+        <input type="password" name="password" data-type="PH" placeholder="请输入密码">
       </label>
     </div>
     

@@ -54,6 +54,7 @@
         @endif
     </div>
 </div>
+<!-- <img src="{{Config::get('app.HTTP_LOGO')}}"> -->
 <div class="site-header">
     <div class="container">
         <div class="header-logo">

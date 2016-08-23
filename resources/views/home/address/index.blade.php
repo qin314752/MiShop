@@ -12,7 +12,7 @@
     <!-- 城市三级联动 开始 -->
 
         <!--导入插件-->
-    <script type="text/javascript" src="/san/jquery.js"></script>
+    <!-- <script type="text/javascript" src="/san/jquery.js"></script> -->
     <script type="text/javascript" src="/san/area.js"></script>
     <script type="text/javascript" src="/san/location.js"></script>
     <!-- 城市三级联动 结束 -->
@@ -130,11 +130,11 @@
                       <dl>
                         <dt>
                           
-                          <div class="uname cc">收件人: {{$v->uname}}</div>
+                          <dd>收件人: <span class="uname cc"> {{$v->uname}}</span></dd>
                         </dt>
-                          <dd class="utel bb">手机号码: {{$v->tel}}</dd>
+                          <dd>手机号码: <span class="utel bb"> {{$v->tel}}</span></dd>
                         
-                        <dd class="uaddress dd">收货地址: {{$v->addr}}</dd> 
+                        <dd>收货地址:  <span class="uaddress dd">{{$v->addr}}</span></dd> 
                       </dl>
                         <!-- <div name=""> -->
                         <input type="hidden" class="id" name="id" value="{{$v->id}}">
@@ -176,7 +176,7 @@ $.get('addr/del',{id:id},function(data){
 });
 
 
-
+//选着默认地址
 $('.abcd').dblclick(function()
 {
 $(this).css('background','#ddd');
@@ -185,6 +185,7 @@ var id= $(this).find('.id').val();
 // alert(id);
 var aa = $(this);
 $.get("{{url('/addr/upde')}}",{id:id},function(data){
+  console.log(data);
   if(data){
      
      aa.css('background','#ccc').siblings().css({'background':''});
@@ -307,7 +308,13 @@ $.get("{{url('/addr/upde')}}",{id:id},function(data){
         <br></div>
         
       <div class="modal-footer">
-        <script type="text/javascript">
+
+        <button   class="btn btn-primary ">修改</button></div>
+    </div>
+  </div>
+</div>
+</form>
+<script type="text/javascript">
           
 <!-- 修改 -->
  
@@ -324,13 +331,7 @@ var addr = $(this).parents('.dell').find('.dd').html();
 
 });
 
-        </script>
-        <button   class="btn btn-primary ">修改</button></div>
-    </div>
-  </div>
-</div>
-</form>
-
+</script>
 
   </body>
 

@@ -172,7 +172,7 @@
 
 			}
 			if(i==-1){
-				window.location.href='http://lamp.cn';
+				window.location.href='http://www.lampmaster.com/';
 				
 		}
 	
